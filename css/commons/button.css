@@ -1,0 +1,54 @@
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--base-white);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-color-hover);
+  border-color: var(--primary-color-hover);
+  color: var(--base-white);
+}
+
+.btn-primary:active,
+.btn-primary.active {
+  background-color: var(--primary-color-active) !important;
+  border-color: var(--primary-color-active) !important;
+  color: var(--base-white) !important;
+}
+
+.btn-warning {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  color: var(--base-white);
+}
+
+.btn-warning:hover {
+  background-color: var(--secondary-color-hover);
+  border-color: var(--secondary-color-hover);
+  color: var(--base-white);
+}
+
+.btn-warning:active,
+.btn-warning.active {
+  background-color: var(--secondary-color-active) !important;
+  border-color: var(--secondary-color-active) !important;
+  color: var(--base-white) !important;
+}
+
+.btn-primary.disabled,
+.btn-secondary.disabled {
+  background-color: var(--disabled-color) !important;
+  border-color: var(--disabled-color) !important;
+  color: var(--on-disabled-color) !important;
+}
+
+/* button tag */
+.btn-outline-secondary:hover,
+.btn-outline-secondary:active,
+.btn-outline-secondary.active,
+.btn-outline-secondary.selected {
+  background-color: transparent !important;
+  border-color: var(--primary-color) !important;
+  color: var(--primary-color) !important;
+}
