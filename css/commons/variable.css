@@ -1,0 +1,130 @@
+@import url("./font/font.css");
+
+/* Primitives */
+:root {
+  /* Color */
+  /* Base Color */
+  --base-white: #ffffff;
+  --base-black: #1e1f20;
+  /* yellow */
+  --yellow-50: #fffde7;
+  --yellow-100: #fff9c4;
+  --yellow-200: #fff59d;
+  --yellow-300: #ffee58;
+  --yellow-400: #ffeb3b;
+  --yellow-500: #fdd836;
+  --yellow-600: #fdd836;
+  --yellow-700: #fbc02d;
+  --yellow-800: #f9a925;
+  --yellow-900: #ee9605;
+  /* pink */
+  --pink-50: #faf0fb;
+  --pink-100: #cbb4ef;
+  --pink-200: #e4b8e9;
+  --pink-300: #d190dc;
+  --pink-400: #bc68cf;
+  --pink-500: #a751c2;
+  --pink-600: #8c47a1;
+  --pink-700: #7a347b;
+  --pink-800: #5e275a;
+  --pink-900: #411a3a;
+  /* purple */
+  --purple-50: #e6d9f7;
+  --purple-100: #cbb4ef;
+  --purple-200: #b28fe7;
+  --purple-300: #996adb;
+  --purple-400: #8247cf;
+  --purple-500: #6b27ca;
+  --purple-600: #6638b8;
+  --purple-700: #492a7a;
+  --purple-800: #371f5c;
+  --purple-900: #2b1453;
+  /* Gray */
+  --gray-100: #f8f9fa;
+  --gray-200: #eaecef;
+  --gray-300: #dee2e6;
+  --gray-400: #ced4da;
+  --gray-500: #acb5bd;
+  --gray-600: #6c757d;
+  --gray-700: #495057;
+  --gray-800: #343a40;
+  --gray-900: #1e1f20;
+
+  /* Basic Spacing Unit */
+  --spacing-unit-0: 0px;
+  --spacing-unit-1: 4px;
+  --spacing-unit-2: 8px;
+  --spacing-unit-3: 12px;
+  --spacing-unit-4: 16px;
+  --spacing-unit-5: 20px;
+  --spacing-unit-6: 24px;
+  --spacing-unit-7: 28px;
+  --spacing-unit-8: 32px;
+  --spacing-unit-9: 36px;
+  --spacing-unit-10: 40px;
+  --spacing-unit-11: 44px;
+  --spacing-unit-12: 48px;
+  --spacing-unit-13: 52px;
+  --spacing-unit-14: 56px;
+  --spacing-unit-15: 60px;
+  --spacing-unit-16: 64px;
+}
+
+/* Typography */
+:root {
+  /* Text Style */
+  /* Body */
+  --body-font: "Space Grotesk", sans-serif;
+  --body-font-size: 14px;
+  --body-line-height: 150%;
+  --body-font-weight: normal; /* Regular */
+
+  /* Heading */
+  /* Heading 1 */
+  --h1-font: "MonsterFriendFore", sans-serif;
+  --h1-font-size: 32px;
+  /* Heading 2 - 5 */
+  --heading-font: "Bricolage Grotesque", sans-serif;
+  --heading-font-weight: medium;
+  --h2-font-size: 36px;
+  --h3-font-size: 32px;
+  --h4-font-size: 24px;
+  --h5-font-size: 20px;
+  /* Heading 6 */
+  --h6-font-size: 16px;
+  --h6-font-weight: bold;
+}
+
+/* Token */
+:root {
+  /* Primary Background Colors */
+  --primary-background-color: var(--base-black);
+  --on-primary-background-color: var(--gray-400);
+
+  /* Secondary Background Colors */
+  --secondary-background-color: var(--base-white);
+  --on-secondary-background-color: var(var(--gray-600));
+
+  /* Primary Color */
+  --primary-color: var(--pink-400);
+  --primary-color-hover: var(--pink-500);
+  --primary-color-active: var(--pink-600);
+
+  /* Secondary Color */
+  --secondary-color: var(--yellow-800);
+  --secondary-color-hover: var(--yellow-900);
+  --secondary-color-active: #c57e0b;
+
+  /* Disabled Color */
+  --disabled-color: var(--gray-200);
+  --on-disabled-color: var(--gray-600);
+
+  /* Spacing Unit */
+  --spacing-none: var(--spacing-unit-0); /* --spacing-0: 0px */
+  --spacing-1: var(--spacing-unit-1); /* --spacing-1: 4px */
+  --spacing-2: var(--spacing-unit-2); /* --spacing-2: 8px */
+  --spacing-3: var(--spacing-unit-4); /* --spacing-3: 16px */
+  --spacing-4: var(--spacing-unit-6); /* --spacing-4: 24px */
+  --spacing-5: var(--spacing-unit-12); /* --spacing-5: 48px */
+  --spacing-6: var(--spacing-unit-16); /* --spacing-6: 64px */
+}

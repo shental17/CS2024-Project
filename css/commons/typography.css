@@ -1,0 +1,39 @@
+/* Body */
+body {
+  font-family: var(--body-font);
+  font-size: var(--body-font-size);
+  line-height: var(--body-line-height);
+  font-weight: var(--body-font-weight);
+}
+h1 {
+  font-family: var(--h1-font);
+  font-size: var(--h1-font-size);
+}
+
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--heading-font);
+  font-weight: var(--heading-font-weight);
+}
+h2 {
+  font-size: var(--h2-font-size);
+}
+
+h3 {
+  font-size: var(--h3-font-size);
+}
+
+h4 {
+  font-size: var(--h4-font-size);
+}
+
+h5 {
+  font-size: var(--h5-font-size);
+}
+
+h6 {
+  font-family: var(--h6-font);
+  font-size: var(--h6-font-size);
+}
