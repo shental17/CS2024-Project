@@ -26,7 +26,9 @@
 #featured-games #retro-legends .content {
   padding: var(--spacing-6);
 }
-
+#featured-games #supported-consoles .logo {
+  color: var(--pink-200);
+}
 #featured-games #supported-consoles .logo-wrapper {
   aspect-ratio: 1;
   border-radius: var(--spacing-3);
