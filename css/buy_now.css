@@ -7,9 +7,10 @@
 }
 
 .shopping-header {
-  font-size: 60px;
+  font-size: 48px;
   line-height: 150%;
   color: var(--secondary-background-color);
+  word-wrap: break-word; word-break: break-word;
 }
 
 .main-pdt-card {

@@ -2,6 +2,24 @@
   background-color: red;
 }
 
+.test2 {
+  background-color: green;
+}
+
+.loading-page {
+  background-color: var(--primary-background-color);
+}
+
+.loading {
+  height: 64px;
+}
+
+.loading .color {
+  width: 0px;
+  height: 100%;
+  background-color: var(--primary-color);
+}
+
 .video {
   position: relative; 
   width: 100%; 

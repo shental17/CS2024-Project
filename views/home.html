@@ -17,6 +17,7 @@
       crossorigin="anonymous"
     />
     <link rel="icon" href="../assets/pyxel-favicon.svg" type="image/svg">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/home.css" />
     <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
@@ -24,8 +25,88 @@
     <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script> 
     <script src="../js/lenis_scroll.js"></script> 
     <script src="../js/testimonies.js"></script> 
+    <script src="../js/loading.js"></script> 
   </head>
-  <body class="primary-background d-flex flex-column align-items-center overflow-hidden" style="overflow-x: hidden;">
+  <body class="primary-background d-flex flex-column align-items-center overflow-hidden position-relative" style="overflow-x: hidden;">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar navbar-dark bg-transparent fixed-top navbar-expand-lg px-4 py-4" >
+      <div class="container-fluid p-0 m-0">
+        <a class="navbar-brand p-0" href="home.html">
+          <img src="../assets/pyxels-logo.svg" alt="Pyxels">
+        </a>
+        <button class="navbar-toggler" type="button" 
+          data-bs-toggle="offcanvas" 
+          data-bs-target="#offcanvasDarkNavbar" 
+          aria-controls="offcanvasDarkNavbar" 
+          aria-label="Toggle navigation">
+          <i class='bx bx-menu-alt-right icon fs-2' style="color: var(--secondary-background-color)"></i>
+        </button>
+        
+        <div class="offcanvas offcanvas-end text-bg-dark" 
+          tabindex="-1" 
+          id="offcanvasDarkNavbar" 
+          aria-labelledby="offcanvasDarkNavbarLabel">
+
+          <div class="offcanvas-header">
+            <img class="offcanvas-title" src="../assets/pyxels-logo.svg" alt="Pyxels">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 gap-4" style="padding-right: 100px;">
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Pyxel Collection
+                  <i class='bx bx-chevron-down icon'></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="buy_now_lumio.html">Lumio 64</a></li>
+                  <li><a class="dropdown-item" href="buy_now_voltio.html">Voltio Classic</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="about_us.html">Behind the Pyxels</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Game Arcade</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Updates</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Support</a>
+              </li>
+              
+              <a class="position-absolute cart-link" href="#">
+                <div class="d-flex justify-content-center align-items-center cart-btn">
+                  <i class='bx bx-cart icon'></i>
+                </div>
+              </a>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </nav>
+
+    <!-- Loading page -->
+    <div class="vh-100 vw-100 d-flex justify-content-center align-items-center position-absolute loading-page">
+      <div class="d-flex flex-column col-10 col-sm-6 col-xl-4">
+        <div class="d-flex flex-column flex-md-row justify-content-between" style="color: var(--secondary-background-color);">
+          <h1 class="col-12 col-md-8" style="font-size: 36px;">Loading...</h1>
+          <h1 class="d-flex flex-row gap-2 col-12 col-md-4 justify-content-end" style="font-size: 36px;">
+            <p class="m-0" id="nbr">0</p>
+            <span style="font-family: 'Space Grotesk';">%</span>
+          </h1>
+        </div>
+        <div class="d-flex py-2 px-2 loading" style="border: 4px solid var(--primary-color)">
+          <div id="loadingBar" class="color"></div>
+        </div>
+      </div>
+    </div>
 
     <!-- Hero -->
     <div class="d-flex flex-column justify-content-center vh-100 w-100">
@@ -257,7 +338,7 @@
               <img src="../assets/index-assets/quote.svg" style="width: 24px; height: 24px;">
               <p class="m-0" style="font-size: 24px; line-height: 150%; color: var(--gray-800)">
                 The 4-inch IPS screen is a game-changer in clarity and comfort, making every game pop with that perfect retro vibe. 
-                It’s not just bigger; it’s crisp and beautifully suited for all kinds of classic titles
+                It’s not just bigger; it’s crisp and beautifully suited for all kinds of classic titles.
               </p>
               
               <div class="d-flex flex-row gap-3 flex-grow-1 align-items-end">
@@ -275,7 +356,7 @@
               <img src="../assets/index-assets/quote.svg" style="width: 24px; height: 24px;">
               <p class="m-0" style="font-size: 24px; line-height: 150%; color: var(--gray-800)">
                 With its ultra-narrow bezel and sharp 4-inch IPS screen, this device gives off that perfect retro vibe. 
-                It's a real blast for fans of vertical handhelds, though the rapid product releases by Pyxels might make it harder for owners to keep up with all the update.
+                It's a real blast for fans of vertical handhelds, though the rapid product releases by Pyxels might make it harder for owners to keep up with all the updates.
               </p>
               
               <div class="d-flex flex-row gap-3 flex-grow-1 align-items-end">
@@ -370,7 +451,7 @@
               <img src="../assets/index-assets/quote.svg" style="width: 24px; height: 24px;">
               <p class="m-0" style="font-size: 24px; line-height: 150%; color: var(--gray-800)">
                 The 4-inch IPS screen is a game-changer in clarity and comfort, making every game pop with that perfect retro vibe. 
-                It’s not just bigger; it’s crisp and beautifully suited for all kinds of classic titles
+                It’s not just bigger; it’s crisp and beautifully suited for all kinds of classic titles.
               </p>
               
               <div class="d-flex flex-row gap-3 flex-grow-1 align-items-end">
@@ -388,7 +469,7 @@
               <img src="../assets/index-assets/quote.svg" style="width: 24px; height: 24px;">
               <p class="m-0" style="font-size: 24px; line-height: 150%; color: var(--gray-800)">
                 With its ultra-narrow bezel and sharp 4-inch IPS screen, this device gives off that perfect retro vibe. 
-                It's a real blast for fans of vertical handhelds, though the rapid product releases by Pyxels might make it harder for owners to keep up with all the update.
+                It's a real blast for fans of vertical handhelds, though the rapid product releases by Pyxels might make it harder for owners to keep up with all the updates.
               </p>
               
               <div class="d-flex flex-row gap-3 flex-grow-1 align-items-end">
@@ -466,7 +547,54 @@
 
     <!-- News -->
     <!-- Contact us / enquiry form -->
+
     <!-- Footer -->
+    <footer class="d-flex w-100 flex-column align-items-end" style="height: 700px;">
+      
+      <!-- Logo -->
+      <div class="d-flex align-items-center flex-grow-1 align-self-center py-4" style="padding: 0px 90px;">
+        <a href="home.html">
+          <img class="float-end mb-3" style="margin-right: -10%; width: 15%; height: auto" src="../assets/footer-assets/hearts.svg">
+          <img class="w-100" src="../assets/footer-assets/PYXELS.svg">
+        </a>
+      </div>
+      
+      <!-- Links -->
+      <div class="d-flex flex-row w-100 px-4 align-items-end flex-wrap">
+        <div class="d-flex flex-column py-4 px-3 gap-1 col-12 col-sm-6 col-lg-4 col-xl-2">
+          <div class="d-flex flex-row gap-1">
+            <a href=""><img class="socials" src="../assets/footer-assets/YouTube.svg"></a>
+            <a href=""><img class="socials" src="../assets/footer-assets/Instagram.svg"></a>
+          </div>
+          <div class="d-flex flex-row gap-1">
+            <a href=""><img class="socials" src="../assets/footer-assets/Facebook.svg"></a>
+            <a href=""><img class="socials" src="../assets/footer-assets/Twitter.svg"></a>
+          </div>
+        </div>
+        <div class="d-flex flex-column gap-1 py-4 px-4 col-12 col-sm-6 col-lg-4 col-xl-2">
+          <a href=""><p>+65 6337 8290</p></a>
+          <a href=""><p>support@pyxels.com</p></a>
+          <p>24 New Industrial Rd, <br>#06-08 InSpace, <br>Singapore 536210</p>
+        </div>
+        <div class="d-flex flex-column gap-1 py-4 px-4 col-12 col-sm-6 col-lg-4 col-xl-2">
+          <p>Pyxel Collection</p>
+          <a href="" style="font-family: 'MonsterFriendFore';"><p>Lumio 64</p></a>
+          <a href="" style="font-family: 'MonsterFriendFore';"><p>Voltio Classic</p></a>
+        </div>
+        <div class="d-flex flex-column gap-1 py-4 px-4 col-12 col-sm-6 col-lg-4 col-xl-2">
+          <a href=""><p>Behind the Pyxels</p></a>
+          <a href=""><p>Game Arcade</p></a>
+        </div>
+        <div class="d-flex flex-column gap-1 py-4 px-4 col-12 col-sm-6 col-lg-4 col-xl-2">
+          <a href=""><p>Updates</p></a>
+          <a href=""><p>Support</p></a>
+          <a href="privacy_policy.html"><p>Privacy Policy</p></a>
+        </div>
+        <div class="d-flex flex-column gap-1 py-4 px-4 col-12 col-sm-6 col-lg-4 col-xl-2">
+          <p>&copy; Pyxels.<br>All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

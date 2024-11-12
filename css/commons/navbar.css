@@ -1,0 +1,71 @@
+nav {
+  font-size: 18px;
+  font-family: 'Bricolage Grotesque';
+  /* transition: all 0.3 ease; */
+  transition: background-color 0.3s cubic-bezier(0.25, 1, 0.5, 1), 
+  box-shadow 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+#navbar.scrolled {
+  background-color: var(--primary-background-color) !important;
+	box-shadow: rgba(188, 104, 207, 0.4) 0px 5px, 
+            rgba(188, 104, 207, 0.3) 0px 10px, 
+            rgba(188, 104, 207, 0.2) 0px 15px, 
+            rgba(188, 104, 207, 0.1) 0px 20px, 
+            rgba(188, 104, 207, 0.05) 0px 25px;
+
+}
+
+.nav-link {
+  color: var(--secondary-background-color);
+  margin: 0px;
+  padding: 0px;
+}
+
+.nav-link.active {
+  color: var(--yellow-600) !important;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: var(--pink-200);
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.dropdown-item {
+  font-family: 'MonsterFriendFore';
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.dropdown-item:hover {
+  background-color: inherit;
+  color: var(--pink-200);
+}
+
+.cart-btn {
+  width: 76px; 
+  height: 76px;
+  color: var(--secondary-background-color); 
+  font-size: 40px;
+  background-color: var(--primary-color);
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.cart-btn:hover {
+  background-color: var(--pink-500);
+}
+
+.cart-btn:active {
+  background-color: var(--pink-600);
+}
+
+.cart-link {
+  text-decoration: none;
+  cursor: pointer;
+  top: 0px;
+  right: 0px;
+  transition: all 1.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
