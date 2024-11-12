@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pyxels - Voltio Classic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" href="../assets/pyxel-favicon.svg" type="image/svg">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/buy_now.css" />
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
+
+    <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script> 
+    <script src="../js/lenis_scroll.js"></script> 
+    <script src="../js/buy_now.js"></script> 
+  </head>
+  <body class="primary-background d-flex flex-column align-items-center">
+
+    <!-- Header -->
+    <div class="d-flex align-items-end" style="height: 300px;">
+      <h1 class="py-4 px-3 shopping-header">Voltio Classic</h1>
+    </div>
+
+    <!-- Product -->
+    <div class="secondary-background w-100 d-flex justify-content-center" style="border-radius: 64px; width: 100%;">
+      <div class="d-flex flex-row flex-wrap" style="max-width: 1320px; padding: 100px 0px;">
+        <!-- Images -->
+        <div class="d-flex flex-column gap-4 py-4 px-4 col-12 col-md-6">
+          <div class="main-pdt-card">
+            <img id="main-pdt" src="../assets/buy-now-assets/retro-orange.png" alt="retro-orange"> 
+          </div>
+
+          <div class="d-flex flex-row gap-4">
+            <div id="retro-orange" class="choose-pdt-card selected"><img src="../assets/buy-now-assets/retro-orange.png" alt="retro-orange"></div>
+            <div id="vintage-grey" class="choose-pdt-card"><img src="../assets/buy-now-assets/vintage-grey.png" alt="vintage-grey"></div>
+            <div id="classic-black" class="choose-pdt-card"><img src="../assets/buy-now-assets/classic-black.png" alt="classic-black"></div>
+          </div>
+        </div>
+
+        <!-- Info -->
+        <div class="d-flex flex-column px-4 py-4 col-12 col-md-6 m-0" style="gap: 72px;">
+          <div class="d-flex flex-column gap-2">
+            <h1 style="color: var(--primary-background-color)">Voltio Classic</h1>
+            <p>Voltio Classic was inspired by the timeless appeal of vintage gaming consoles, paired with cutting-edge technology to deliver an electrifying experience. 
+              As the world embraced the revival of retro games, Voltio Classic was born—a device that revives the spirit of classic gameplay, while providing the convenience and portability to enjoy it anywhere. 
+              The future of retro gaming is here, and it fits right in your hands.</p>
+          </div>
+
+          <!-- Options -->
+          <div class="d-flex flex-column gap-5">
+            <div class="d-flex flex-column gap-2">
+              <h5 style="color: var(--primary-background-color)">Choose your console case:</h5>
+              <div class="d-flex flex-column flex-md-row gap-3">
+                <button type="button" class="btn btn-outline-secondary tag case-tag selected">Retro Orange</button>
+                <button type="button" class="btn btn-outline-secondary tag case-tag">Vintage Grey</button>
+                <button type="button" class="btn btn-outline-secondary tag case-tag">Classic Black</button>
+              </div>
+            </div>
+
+            <div class="d-flex flex-column gap-2">
+              <h5 style="color: var(--primary-background-color)">Choose your storage size:</h5>
+              <div class="d-flex flex-row gap-3">
+                <button type="button" class="btn btn-outline-secondary tag storage-tag selected" data-size="128">128G</button>
+                <button type="button" class="btn btn-outline-secondary tag storage-tag" data-size="256">256G</button>
+                <button type="button" class="btn btn-outline-secondary tag storage-tag" data-size="512">512G</button>
+              </div>
+            </div>
+
+            <div class="d-flex flex-column gap-2">
+              <h5 style="color: var(--primary-background-color)">Quantity:</h5>
+              <div class="d-flex flex-row gap-2 justify-content-between align-items-center p-3" style="width: 180px; border: 1px solid var(--gray-400); border-radius: 64px;">
+                <i style="font-size: 28px;" class='bx bx-minus-circle icon qty-btn' onclick="decreaseValue('qty')"></i>
+                <p class="m-0" id="qty">1</p>
+                <i style="font-size: 28px;" class='bx bx-plus-circle icon qty-btn' onclick="increaseValue('qty')"></i>
+              </div>
+            </div>
+
+            <div class="d-flex flex-row flex-wrap">
+              <h5 class="col-12 col-md-5 pe-4" style="color: var(--primary-background-color)">Included in the box:</h5>
+
+              <div class="d-flex flex-column col-12 col-md-7 px-4 py-3" style="font-size: 20px; line-height: 150%;">
+                <div class="d-flex flex-row gap-3">
+                  <span style="font-family: 'MonsterFriendFore';">+</span>
+                  <p class="m-0" style="font-family: 'MonsterFriendFore';">Voltio Classic</p>
+                </div>
+                <div class="d-flex flex-row gap-3">
+                  <span style="font-family: 'MonsterFriendFore';">+</span>
+                  <p class="m-0">User Manual</p>
+                </div>
+                <div class="d-flex flex-row gap-3">
+                  <span style="font-family: 'MonsterFriendFore';">+</span>
+                  <p class="m-0">Type-C Cable</p>
+                </div>
+                <div class="d-flex flex-row gap-3">
+                  <span style="font-family: 'MonsterFriendFore';">+</span>
+                  <p class="m-0">MicroSD Card</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Price -->
+          <div class="d-flex flex-column gap-3">
+            <div class="d-flex flex-column flex-sm-row gap-3" style="font-weight: 600;">
+              <p id="discountedPrice" style="font-size: 40px; color: var(--primary-color)">S$50.80</p>
+              <s id="originalPrice" style="font-size: 24px;">S$63.50</s>
+            </div>
+            <button type="button" class="btn btn-warning w-100">Add to Cart</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Product Specifications -->
+    <div class="d-flex flex-column w-100" style="padding: 100px 0px; max-width: 1096px;">
+      <h1 class="text-center px-3" style="color: var(--secondary-background-color); word-wrap: break-word; word-break: break-word;"><span style="color: var(--pink-200)">+</span> Product Specifications</h1>
+
+      <div class="d-flex flex-column gap-5">
+        <div class="d-flex flex-row flex-wrap">
+          <div class="d-flex flex-column px-4 pt-5 gap-5 col-12 col-md-6">
+
+            <div class="d-flex flex-row align-items-start gap-2">
+              <h6 class="m-0 specs-header">Colours:</h6>
+              <p class="m-0 specs-p">Vintage Grey, Retro Orange, Classic Black</p>
+            </div>
+            <div class="d-flex flex-row align-items-start gap-2">
+              <h6 class="m-0 specs-header">Screen:</h6>
+              <p class="m-0 specs-p">2.83-inch IPS full viewing angle, OCA full lamination, resolution: 640*480</p>
+            </div>
+            <div class="d-flex flex-row align-items-start gap-2">
+              <h6 class="m-0 specs-header">CPU:</h6>
+              <p class="m-0 specs-p">H700 quad-core ARM Cortex-A53</p>
+            </div>
+            <div class="d-flex flex-row align-items-start gap-2">
+              <h6 class="m-0 specs-header">GPU:</h6>
+              <p class="m-0 specs-p">Dual-Core G31 MP2</p>
+            </div>
+            <div class="d-flex flex-row align-items-start gap-2">
+              <h6 class="m-0 specs-header">RAM:</h6>
+              <p class="m-0 specs-p">LPDDR4 1GB</p>
+            </div>
+            
+          </div>
+
+          <div class="d-flex flex-column px-4 pt-5 gap-5 col-12 col-md-6">
+            
+            <div class="d-flex flex-row align-items-start gap-2">
+              <h6 class="m-0 specs-header">Storage:</h6>
+              <p class="m-0 specs-p">64GB TF/MicroSD</p>
+            </div>
+            <div class="d-flex flex-row align-items-start gap-2">
+              <h6 class="m-0 specs-header">System:</h6>
+              <p class="m-0 specs-p">Linux</p>
+            </div>
+            <div class="d-flex flex-row align-items-start gap-2">
+              <h6 class="m-0 specs-header">Speaker:</h6>
+              <p class="m-0 specs-p">High-fidelity speaker</p>
+            </div>
+            <div class="d-flex flex-row align-items-start gap-2">
+              <h6 class="m-0 specs-header">Battery:</h6>
+              <p class="m-0 specs-p">Li-polymer battery 3200mAh, lasting 6 hours</p>
+            </div>
+            <div class="d-flex flex-row align-items-start gap-2">
+              <h6 class="m-0 specs-header">TF card:</h6>
+              <p class="m-0 specs-p">Dual card slots, support TF card expansion, maximum 512GB</p>
+            </div>
+            
+          </div>
+        </div>
+
+        <!-- Others -->
+        <div class="d-flex flex-row align-items-start gap-2 px-4">
+          <h6 class="m-0 specs-header">Others:</h6>
+          <p class="m-0 specs-p">2.4 G wireless controller and wired controller connection, HD connection to monitor, file manager, expert mode, WIFI online pairing, streaming, vibration. 
+            Supports music player with formats such as FLAC, MP3, WAV, APE, AIF, AIFF, OGG, WMA, AAC, M4A, M4R, file manager, expert mode, e-book reader (supports TXT format).</p>
+        </div>
+      </div>
+    </div>
+
+
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+    ></script>
+
+  </body>
+</html>
