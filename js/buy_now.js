@@ -8,6 +8,28 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
     event.currentTarget.classList.add('selected');
+
+    const caseType = event.currentTarget.dataset.case
+    const choosePdt = Array.from(document.getElementsByClassName('choose-pdt-card'));
+    const mainPdt = document.getElementById('main-pdt');
+
+    choosePdt.forEach(element => {
+      element.classList.remove('selected');
+    })
+
+    choosePdt.forEach(element => {
+      if (element.id === caseType) {
+        element.classList.add('selected');
+      };
+    })
+
+    // Fade out current image
+    mainPdt.style.opacity = '0';
+
+    setTimeout(() => {
+      mainPdt.src = `../assets/buy-now-assets/${caseType}.png`; // Change image src
+      mainPdt.style.opacity = '1'; // Fade in with the new image
+    }, 400); // Delay should match the CSS transition duration
   };
 
   consoleTags.forEach(element => {
