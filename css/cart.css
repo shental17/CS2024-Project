@@ -1,0 +1,18 @@
+#cart h1 {
+  color: var(--base-white);
+  text-align: center;
+}
+#cart .content {
+  padding: var(--spacing-5);
+  border-radius: var(--spacing-6);
+  background-color: var(--base-white);
+}
+#cart .content .order-summary h3 {
+  color: var(--base-black);
+}
+#cart .content .order-summary .title {
+  border-bottom: solid 1px var(--gray-400);
+}
+#cart .content .order-summary .total {
+  border-top: solid 1px var(--gray-400);
+}
