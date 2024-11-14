@@ -2,8 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+    <title>Pyxels - Retro Dreams, in your Pocket</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,38 +16,591 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link rel="icon" href="../assets/pyxel-favicon.svg" type="image/svg">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
+
+    <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script> 
+    <script src="../js/lenis_scroll.js"></script> 
+    <script src="../js/testimonies.js"></script> 
+    <script src="../js/loading.js"></script> 
   </head>
-  <body>
-    <!-- Typography -->
-    <h1>Heading 1</h1>
-    <h2>Heading 2</h2>
-    <h3>Heading 3</h3>
-    <h4>Heading 4</h4>
-    <h5>Heading 5</h5>
-    <h6>Heading 6</h6>
-    <p>
-      Paragraph: Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non
-      rhoncus dui, a pellentesque turpis. Sed ultricies vestibulum fermentum.
-      Praesent egestas leo sit amet diam faucibus, sit amet tristique nunc
-      hendrerit. Nunc ut sem sem. In sit amet ipsum id velit lobortis tincidunt.
-      Proin in ipsum ut urna mattis tempor vitae vel velit.
-    </p>
-    <span>Span</span>
-    <!-- Colors -->
-    <h1 class="primary-background">Primary Background</h1>
-    <h1 class="secondary-background">Secondary Background</h1>
-    <p class="primary">Primary</p>
-    <p class="secondary">Secondary</p>
-    <button type="button" class="btn btn-primary">Primary</button>
-    <button type="button" class="btn btn-warning">Warning</button>
-    <button type="button" class="btn btn-primary disabled">Primary</button>
-    <button type="button" class="btn btn-warning disabled">Warning</button>
-    <button type="button" class="btn btn-outline-secondary">Warning</button>
+  <body class="primary-background d-flex flex-column align-items-center overflow-hidden position-relative" style="overflow-x: hidden;">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar navbar-dark bg-transparent fixed-top navbar-expand-lg px-4 py-4" >
+      <div class="container-fluid p-0 m-0">
+        <a class="navbar-brand p-0" href="index.html">
+          <img src="../assets/pyxels-logo.svg" alt="Pyxels">
+        </a>
+        <button class="navbar-toggler" type="button" 
+          data-bs-toggle="offcanvas" 
+          data-bs-target="#offcanvasDarkNavbar" 
+          aria-controls="offcanvasDarkNavbar" 
+          aria-label="Toggle navigation">
+          <i class='bx bx-menu-alt-right icon fs-2' style="color: var(--secondary-background-color)"></i>
+        </button>
+        
+        <div class="offcanvas offcanvas-end text-bg-dark" 
+          tabindex="-1" 
+          id="offcanvasDarkNavbar" 
+          aria-labelledby="offcanvasDarkNavbarLabel">
+
+          <div class="offcanvas-header">
+            <img class="offcanvas-title" src="../assets/pyxels-logo.svg" alt="Pyxels">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 gap-4" style="padding-right: 100px;">
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Pyxel Collection
+                  <i class='bx bx-chevron-down icon'></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="lumio.html">Lumio 64</a></li>
+                  <li><a class="dropdown-item" href="voltio.html">Voltio Classic</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="about_us.html">Behind the Pyxels</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="featured-games.html">Game Arcade</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="news.html">Updates</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="customer-support.html">Support</a>
+              </li>
+              
+              <a class="position-absolute cart-link" href="cart.html">
+                <div class="d-flex justify-content-center align-items-center cart-btn">
+                  <i class='bx bx-cart icon'></i>
+                </div>
+              </a>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </nav>
+
+    <!-- Loading page -->
+    <div class="vh-100 vw-100 d-flex justify-content-center align-items-center position-absolute loading-page">
+      <div class="d-flex flex-column col-10 col-sm-6 col-xl-4">
+        <div class="d-flex flex-column flex-md-row justify-content-between" style="color: var(--secondary-background-color);">
+          <h1 class="col-12 col-md-8" style="font-size: 36px;">Loading...</h1>
+          <h1 class="d-flex flex-row gap-2 col-12 col-md-4 justify-content-end" style="font-size: 36px;">
+            <p class="m-0" id="nbr">0</p>
+            <span style="font-family: 'Space Grotesk';">%</span>
+          </h1>
+        </div>
+        <div class="d-flex py-2 px-2 loading" style="border: 4px solid var(--primary-color)">
+          <div id="loadingBar" class="color"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero -->
+    <div class="d-flex flex-column justify-content-center vh-100 w-100">
+      <img class="d-none d-lg-block" src="../assets/index-assets/index-hero.svg" alt="hero-img" style="width: 100%; height:auto;"> 
+      <img class="d-block d-lg-none" src="../assets/index-assets/index-hero-sm.svg" alt="hero-img" style="width: auto; height:90%;"> 
+    </div>
+
+    <!-- Offer -->
+    <div class="d-flex flex-row py-5 flex-wrap align-items-center" style="max-width: 1320px;">
+
+      <div class="d-flex flex-column gap-3 px-4 col-md-8 col-12">
+        <h1 style="color: var(--secondary-background-color)">Limited Time Offer</h1>
+        <p>Get ready to power up with the Lumio 64! For a limited time, enjoy 15% off your purchase of this premium retro gaming device. 
+          Don’t miss the chance to experience iconic games with cutting-edge performance and sleek design—at an exclusive launch price. Offer ends soon!</p>
+      </div>
+      <div class="d-flex flex-column justify-content-start py-4 px-4 col-md-4 col-12">
+        <p class="align-self-center" style="color: var(--secondary-color); font-weight: bold;">
+          <span style="font-size: 112px; line-height: 112px;">20%</span>
+          <span style="font-size: 32px;">OFF</span>
+        </p>
+        <div class="d-flex flex-column flex-sm-row gap-3">
+          <button type="button" class="btn btn-primary flex-grow-1">Buy Now</button>
+          <button type="button" class="btn btn-outline-secondary">Learn More</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Product -->
+    <div class="secondary-background w-100 overflow-hidden position-relative" style="border-radius: 64px;">
+
+      <!-- Youtube video -->
+      <div class="video">
+        <iframe 
+          src="https://www.youtube.com/embed/BVMA_5ZUD-I?autoplay=1&loop=1&playlist=BVMA_5ZUD-I&controls=0&modestbranding=1&rel=0&showinfo=0&autohide=1&fs=0&cc_load_policy=0&iv_load_policy=3" 
+          title="YouTube video player" 
+          frameborder="0" 
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;  web-share" 
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <div class="video-mask"></div>
+
+        <div class="video-description d-flex">
+          <div class="d-flex flex-column gap-3 px-4 py-5 col-12 col-lg-8">
+            <h1 style="color: var(--secondary-background-color)">Lumio 64</h1>
+            <p style="color: var(--secondary-background-color)">The Lumio 64 combines modern precision with retro authenticity, delivering a powerful handheld experience crafted for serious retro gaming enthusiasts. 
+              Engineered with high-quality materials and advanced processing power, this device effortlessly runs classic titles with sharp visuals, responsive controls, and exceptional battery life. 
+              Its sleek, minimalist design emphasizes portability and functionality, allowing you to relive iconic games with a refined, modern touch. 
+              Embrace the past with performance built for today.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product promotion -->
+      <div class="d-flex flex-row flex-wrap" style="padding: 100px 0px;">
+        <div class="pe-4 col-12 col-lg-6">
+          <img style="width: 100%; height:auto;" src="../assets/index-assets/index-product.png" alt="Lumio 64">
+        </div>
+        
+        <div class="d-flex justify-content-center justify-content-lg-start pt-5 col-12 col-lg-6">
+          <div class="d-flex flex-column px-4 px-lg-5 gap-5" style="max-width: 648px;">
+            <div class="d-flex flex-column gap-3">
+              <div class="d-flex flex-row align-items-start gap-3">
+                <img src="../assets/index-assets/classics.svg" >
+                <h2 style="color: var(--primary-background-color)" class="m-0">Rediscover the Classics</h2>
+              </div>
+              <p style="font-size: 20px; line-height: 150%;">Step back into the games that started it all. With our Pyxel Collection, you’re not just playing games—you’re reconnecting with iconic titles that defined generations. 
+                Every pixel, every sound, and every moment is crafted to capture the spirit of retro gaming, letting you relive the classics exactly as you remember them. </p>
+            </div>
+            <div class="d-flex flex-column gap-3">
+              <div class="d-flex flex-row align-items-start gap-3">
+                <img src="../assets/index-assets/play.svg" >
+                <h2 style="color: var(--primary-color)" class="m-0">Play Anywhere, Anytime</h2>
+              </div>
+              <p style="font-size: 20px; line-height: 150%;">
+                Experience the freedom of gaming on the go. The portable design and robust battery life makes it easy to dive into your favorite games, no matter where you are. </p>
+            </div>
+            <div class="d-flex flex-column gap-3">
+              <div class="d-flex flex-row align-items-start gap-3">
+                <img src="../assets/index-assets/nostalgia.svg" >
+                <h2 style="color: var(--secondary-color)" class="m-0">Nostalgia, Perfected</h2>
+              </div>
+              <p style="font-size: 20px; line-height: 150%;">A blend of retro style and modern technology, our Pyxel Collection brings timeless gaming into the present. This is nostalgia, perfected—designed for today’s player while honoring yesterday’s memories. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 products -->
+      <div class="d-flex flex-row justify-content-center px-4 flex-wrap" style="padding: 100px 0px; gap: var(--spacing-6)">
+        <!-- Lumio -->
+        <div class="d-flex flex-column gap-5 col-12 col-lg-6" style="max-width: 536px;">
+          <a href="buy_now_lumio.html"><div class="product-img px-5 py-3"><img src="../assets/index-assets/index-lumio.png"></div></a>
+          <div class="d-flex flex-column gap-3">
+            <h1 style="color: var(--primary-background-color)">Lumio 64</h1>
+            <p>Compact yet powerful, this handheld console brings classic games to life with vibrant color, smooth controls, and a design that’s both nostalgic and modern.<br><br>
+              Featuring multi-console compatibility, it’s your all-in-one device to relive arcade adventures, platforming classics, and iconic 8-bit games—anytime, anywhere.</p>
+          </div>
+          <div class="d-flex flex-column flex-sm-row gap-3">
+            <button type="button" class="btn btn-primary flex-grow-1">Buy Now</button>
+            <button type="button" class="btn btn-outline-secondary">Explore the Specs</button>
+          </div>
+        </div>
+
+        <!-- Voltio -->
+        <div class="d-flex flex-column gap-5 col-12 col-lg-6" style="max-width: 536px;">
+          <a href="buy_now_voltio.html"><div class="product-img"><img src="../assets/index-assets/index-voltio.png"></div></a>
+          <div class="d-flex flex-column gap-3">
+            <h1 style="color: var(--primary-background-color)">Voltio Classic</h1>
+            <p>With its sleek design and high-performance emulation, the Voltio Classic brings you smooth gameplay from your favorite classic consoles.<br><br>
+              With a sharp display, responsive controls, and support for a wide range of retro games, this handheld console is your ticket to endless adventure, right in your pocket.</p>
+          </div>
+          <div class="d-flex flex-column flex-sm-row gap-3">
+            <button type="button" class="btn btn-primary flex-grow-1">Buy Now</button>
+            <button type="button" class="btn btn-outline-secondary">Explore the Specs</button>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- Games -->
+    <div id="carouselExampleSlidesOnly" class="carousel slide overflow-hidden w-100" 
+      data-bs-ride="carousel" 
+      data-bs-touch="true" 
+      data-bs-pause="false"
+      data-bs-interval="3000">
+
+      <div class="carousel-inner w-100 test">
+        <div class="carousel-item active d-flex justify-content-center">
+          <img src="../assets/index-assets/games-carousel/zelda.jpg" class="d-block carousel-img" alt="...">
+          <h1 class="carousel-caption d-flex justify-content-center px-4 py-5">Legend of Zelda: <br> A Link to the Past and Four Swords</h1>
+        </div>
+        <div class="carousel-item">
+          <img src="../assets/index-assets/games-carousel/king.jpg" class="d-block carousel-img" alt="...">
+          <h1 class="carousel-caption d-flex justify-content-center px-4 py-5">Street Fighter II</h1>
+        </div>
+        <div class="carousel-item">
+          <img src="../assets/index-assets/games-carousel/metal-slug.jpg" class="d-block carousel-img" alt="...">
+          <h1 class="carousel-caption d-flex justify-content-center px-4 py-5">Metal Slug</h1>
+        </div>
+        <div class="carousel-item">
+          <img src="../assets/index-assets/games-carousel/pokemon.jpg" class="d-block carousel-img" alt="...">
+          <h1 class="carousel-caption d-flex justify-content-center px-4 py-5">Pokemon Red & Blue</h1>
+        </div>
+        <div class="carousel-item">
+          <img src="../assets/index-assets/games-carousel/sonic.png" class="d-block carousel-img" alt="...">
+          <h1 class="carousel-caption d-flex justify-content-center px-4 py-5">Sonic the Hedgehog</h1>
+        </div>
+      </div>
+
+      <div class="carousel-mask"></div>
+
+      <div class="video-description d-flex">
+        <div class="d-flex flex-column px-5 py-5 col-12 col-lg-8 gap-5">
+          <div class="d-flex flex-column">
+            <h3 style="color: var(--secondary-background-color)">Game Arcade</h3>
+            <p style="color: var(--secondary-background-color); font-size: 20px; line-height: 150%;">Take a step back into the retro world with Lumio 64. From pixel-perfect platformers to action titles, Lumio 64 offers a nostalgic library to your fingertips, with seamless gameplay and clear visuals that stay true to the original.</p>
+          </div>
+          <button type="button" class="btn btn-primary align-self-end">Featured Games</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tagline -->
+    <div class="d-flex align-items-center" style="height: 400px; ">
+      <h1 class="d-flex flex-row gap-3 px-3 flex-wrap" style="font-size: 44px;"> 
+        <span style="color: var(--secondary-background-color)">Revive.</span>
+        <span style="color: var(--primary-color)">Relive.</span>
+        <span style="color: var(--secondary-color)">Replay.</span>
+      </h1>
+    </div>
+
+    <!-- Behind the Pyxels -->
+    <div class="d-flex flex-row w-100 align-items-center flex-wrap position-relative">
+      <div class="col-12 col-lg-6 pe-4">
+        <img style="width: 100%; height:auto" src="../assets/index-assets/behind-pyxels.svg" alt="behind-pyxels">
+      </div>
+
+      <div class="d-flex justify-content-center justify-content-lg-start col-12 col-lg-6">
+        <div class="d-flex flex-column py-5 px-lg-5 px-4 gap-5" style="max-width: 648px;">
+          <div>
+            <h3 style="color: var(--secondary-background-color)">Behind the Pyxels</h3>
+            <p style="font-size: 20px; line-height: 150%;">Curious about what makes Pyxels more than just a retro gaming brand? 
+              Explore our journey of creativity, passion, and nostalgia—how it all began, the inspiration behind our mascot Pyx, 
+              and the steps we take to bring timeless gaming experiences to life for a new generation.</p>
+          </div>
+          <button type="button" class="btn btn-primary align-self-end">Explore our Story</button>
+        </div>
+      </div>
+
+      <div class="building"></div>
+    </div>
+
+    <!-- Retro Approved -->
+    <div class="secondary-background w-100 d-flex flex-column gap-5 justify-content-center overflow-hidden position-relative" style="border-radius: 64px; padding: 100px 0px;">
+      <div class="d-flex flex-column text-center px-4 align-self-center" style="max-width: 1096px;">
+        <h1 style="color: var(--primary-background-color)"><span style="color: var(--pink-200)">+</span> Retro Approved</h1>
+        <p style="font-size: 20px; line-height: 150%;">From their sleek, portable design to its stunning screen quality and extensive retro game support, our Pyxel Collection has earned high marks for delivering an authentic gaming experience. 
+          These are genuine insights, compiled from top reviewers, spotlighting why our Pyxel Collection is a must-have for both casual and dedicated retro gamers. 
+          Dive into the praise and see why this device is celebrated as a perfect blend of nostalgia and modern functionality.</p>
+      </div>
+
+      <!-- Infinite scroll -->
+      <div class="d-flex flex-row gap-4 px-5 position-relative" style="width: 5000px;">
+        <div class="d-flex flex-row gap-4 justify-content-start testimonies py-1">
+
+          <a href="https://www.youtube.com/watch?v=3Nq2Q_BzFrU" target="_blank" class="d-flex flex-grow-1">
+            <div class="testimony d-flex flex-column p-4 gap-4">
+              <img src="../assets/index-assets/quote.svg" style="width: 24px; height: 24px;">
+              <p class="m-0" style="font-size: 24px; line-height: 150%; color: var(--gray-800)">
+                With custom firmware support, this device goes from good to great. 
+                It’s amazing how easily you can tweak it to suit exactly what you want from a retro console, making it ideal for both new fans and veteran gamers alike.
+              </p>
+              
+              <div class="d-flex flex-row gap-3 flex-grow-1 align-items-end">
+                <img class="testimony-img" src="../assets/index-assets/testimonies/vladnerd.png" alt="partner">
+                <div class="d-flex flex-column">
+                  <p class="m-0 partner-name">VladNerd</p>
+                  <p class="m-0 partner-designation">Gaming Hardware Specialist</p>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://retrohandhelds.gg/anbernic-rg40xxv-review/" target="_blank" class="d-flex flex-grow-1">
+            <div class="testimony d-flex flex-column p-4 gap-4">
+              <img src="../assets/index-assets/quote.svg" style="width: 24px; height: 24px;">
+              <p class="m-0" style="font-size: 24px; line-height: 150%; color: var(--gray-800)">
+                The 4-inch IPS screen is a game-changer in clarity and comfort, making every game pop with that perfect retro vibe. 
+                It’s not just bigger; it’s crisp and beautifully suited for all kinds of classic titles.
+              </p>
+              
+              <div class="d-flex flex-row gap-3 flex-grow-1 align-items-end">
+                <img class="testimony-img" src="../assets/index-assets/testimonies/creative4gaming.png" alt="partner">
+                <div class="d-flex flex-column justify-content-between">
+                  <p class="m-0 partner-name">Creative4Gaming</p>
+                  <p class="m-0 partner-designation">Content Creator and Game Reviewer</p>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://retrododo.com/anbernic-rg40xx-v-review/" target="_blank" class="d-flex flex-grow-1">
+            <div class="testimony d-flex flex-column p-4 gap-4">
+              <img src="../assets/index-assets/quote.svg" style="width: 24px; height: 24px;">
+              <p class="m-0" style="font-size: 24px; line-height: 150%; color: var(--gray-800)">
+                With its ultra-narrow bezel and sharp 4-inch IPS screen, this device gives off that perfect retro vibe. 
+                It's a real blast for fans of vertical handhelds, though the rapid product releases by Pyxels might make it harder for owners to keep up with all the updates.
+              </p>
+              
+              <div class="d-flex flex-row gap-3 flex-grow-1 align-items-end">
+                <img class="testimony-img" src="../assets/index-assets/testimonies/retrododo.png" alt="partner">
+                <div class="d-flex flex-column justify-content-between">
+                  <p class="m-0 partner-name">RetroDodo</p>
+                  <p class="m-0 partner-designation">Retro Gaming Blog</p>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://www.youtube.com/watch?v=ECe4Lak58fY" target="_blank" class="d-flex flex-grow-1">
+            <div class="testimony d-flex flex-column p-4 gap-4">
+              <img src="../assets/index-assets/quote.svg" style="width: 24px; height: 24px;">
+              <p class="m-0" style="font-size: 24px; line-height: 150%; color: var(--gray-800)">
+                Pyxels really hit it out of the park with this design. 
+                It's like a tribute to classic handhelds but with modern features, giving you the best of both worlds in a portable, durable package.
+              </p>
+              
+              <div class="d-flex flex-row gap-3 flex-grow-1 align-items-end">
+                <img class="testimony-img" src="../assets/index-assets/testimonies/retrogamecorps.png" alt="partner">
+                <div class="d-flex flex-column">
+                  <p class="m-0 partner-name">Retro Game Corps</p>
+                  <p class="m-0 partner-designation">Retro Gaming Expert</p>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://droix.net/blogs/anbernic-rg-40xxv-review/" target="_blank" class="d-flex flex-grow-1">
+            <div class="testimony d-flex flex-column p-4 gap-4">
+              <img src="../assets/index-assets/quote.svg" style="width: 24px; height: 24px;">
+              <p class="m-0" style="font-size: 24px; line-height: 150%; color: var(--gray-800)">
+                The display on this device is phenomenal—it’s an amazing 4” screen that really enhances the handheld experience. 
+                The RGB lighting around the analog stick just adds that extra touch that makes it feel customizable and modern.
+              </p>
+              
+              <div class="d-flex flex-row gap-3 flex-grow-1 align-items-end">
+                <img class="testimony-img" src="../assets/index-assets/testimonies/droix.png" alt="partner">
+                <div class="d-flex flex-column justify-content-between">
+                  <p class="m-0 partner-name">DroiX</p>
+                  <p class="m-0 partner-designation">Retro Gaming Store Owner</p>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://odysee.com/@RetroHandhelds:c/anbernic-rg40xxv-review-this-might-be-my:3" target="_blank" class="d-flex flex-grow-1">
+            <div class="testimony d-flex flex-column p-4 gap-4">
+              <img src="../assets/index-assets/quote.svg" style="width: 24px; height: 24px;">
+              <p class="m-0" style="font-size: 24px; line-height: 150%; color: var(--gray-800)">
+                I find the Lumio 64 to be an impressive device. Its portability and ease of use really stand out to me, and the performance is solid overall. 
+                I especially appreciate the quality display and ergonomic design, which makes it perfect for retro gaming. 
+                It feels like the ideal choice for anyone into classic games.
+              </p>
+              
+              <div class="d-flex flex-row gap-3 flex-grow-1 align-items-end">
+                <img class="testimony-img" src="../assets/index-assets/testimonies/retrohandhelds.png" alt="partner">
+                <div class="d-flex flex-column justify-content-between">
+                  <p class="m-0 partner-name">Retro Handhelds</p>
+                  <p class="m-0 partner-designation">Retro Gaming Reviewer</p>
+                </div>
+              </div>
+            </div>
+          </a>
+
+        </div>
+
+        <div class="d-flex flex-row gap-4 justify-content-start testimonies py-1">
+
+          <a href="https://www.youtube.com/watch?v=3Nq2Q_BzFrU" target="_blank" class="d-flex flex-grow-1">
+            <div class="testimony d-flex flex-column p-4 gap-4">
+              <img src="../assets/index-assets/quote.svg" style="width: 24px; height: 24px;">
+              <p class="m-0" style="font-size: 24px; line-height: 150%; color: var(--gray-800)">
+                With custom firmware support, this device goes from good to great. 
+                It’s amazing how easily you can tweak it to suit exactly what you want from a retro console, making it ideal for both new fans and veteran gamers alike.
+              </p>
+              
+              <div class="d-flex flex-row gap-3 flex-grow-1 align-items-end">
+                <img class="testimony-img" src="../assets/index-assets/testimonies/vladnerd.png" alt="partner">
+                <div class="d-flex flex-column">
+                  <p class="m-0 partner-name">VladNerd</p>
+                  <p class="m-0 partner-designation">Gaming Hardware Specialist</p>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://retrohandhelds.gg/anbernic-rg40xxv-review/" target="_blank" class="d-flex flex-grow-1">
+            <div class="testimony d-flex flex-column p-4 gap-4">
+              <img src="../assets/index-assets/quote.svg" style="width: 24px; height: 24px;">
+              <p class="m-0" style="font-size: 24px; line-height: 150%; color: var(--gray-800)">
+                The 4-inch IPS screen is a game-changer in clarity and comfort, making every game pop with that perfect retro vibe. 
+                It’s not just bigger; it’s crisp and beautifully suited for all kinds of classic titles.
+              </p>
+              
+              <div class="d-flex flex-row gap-3 flex-grow-1 align-items-end">
+                <img class="testimony-img" src="../assets/index-assets/testimonies/creative4gaming.png" alt="partner">
+                <div class="d-flex flex-column justify-content-between">
+                  <p class="m-0 partner-name">Creative4Gaming</p>
+                  <p class="m-0 partner-designation">Content Creator and Game Reviewer</p>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://retrododo.com/anbernic-rg40xx-v-review/" target="_blank" class="d-flex flex-grow-1">
+            <div class="testimony d-flex flex-column p-4 gap-4">
+              <img src="../assets/index-assets/quote.svg" style="width: 24px; height: 24px;">
+              <p class="m-0" style="font-size: 24px; line-height: 150%; color: var(--gray-800)">
+                With its ultra-narrow bezel and sharp 4-inch IPS screen, this device gives off that perfect retro vibe. 
+                It's a real blast for fans of vertical handhelds, though the rapid product releases by Pyxels might make it harder for owners to keep up with all the updates.
+              </p>
+              
+              <div class="d-flex flex-row gap-3 flex-grow-1 align-items-end">
+                <img class="testimony-img" src="../assets/index-assets/testimonies/retrododo.png" alt="partner">
+                <div class="d-flex flex-column justify-content-between">
+                  <p class="m-0 partner-name">RetroDodo</p>
+                  <p class="m-0 partner-designation">Retro Gaming Blog</p>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://www.youtube.com/watch?v=ECe4Lak58fY" target="_blank" class="d-flex flex-grow-1">
+            <div class="testimony d-flex flex-column p-4 gap-4">
+              <img src="../assets/index-assets/quote.svg" style="width: 24px; height: 24px;">
+              <p class="m-0" style="font-size: 24px; line-height: 150%; color: var(--gray-800)">
+                Pyxels really hit it out of the park with this design. 
+                It's like a tribute to classic handhelds but with modern features, giving you the best of both worlds in a portable, durable package.
+              </p>
+              
+              <div class="d-flex flex-row gap-3 flex-grow-1 align-items-end">
+                <img class="testimony-img" src="../assets/index-assets/testimonies/retrogamecorps.png" alt="partner">
+                <div class="d-flex flex-column">
+                  <p class="m-0 partner-name">Retro Game Corps</p>
+                  <p class="m-0 partner-designation">Retro Gaming Expert</p>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://droix.net/blogs/anbernic-rg-40xxv-review/" target="_blank" class="d-flex flex-grow-1">
+            <div class="testimony d-flex flex-column p-4 gap-4">
+              <img src="../assets/index-assets/quote.svg" style="width: 24px; height: 24px;">
+              <p class="m-0" style="font-size: 24px; line-height: 150%; color: var(--gray-800)">
+                The display on this device is phenomenal—it’s an amazing 4” screen that really enhances the handheld experience. 
+                The RGB lighting around the analog stick just adds that extra touch that makes it feel customizable and modern.
+              </p>
+              
+              <div class="d-flex flex-row gap-3 flex-grow-1 align-items-end">
+                <img class="testimony-img" src="../assets/index-assets/testimonies/droix.png" alt="partner">
+                <div class="d-flex flex-column justify-content-between">
+                  <p class="m-0 partner-name">DroiX</p>
+                  <p class="m-0 partner-designation">Retro Gaming Store Owner</p>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://odysee.com/@RetroHandhelds:c/anbernic-rg40xxv-review-this-might-be-my:3" target="_blank" class="d-flex flex-grow-1">
+            <div class="testimony d-flex flex-column p-4 gap-4">
+              <img src="../assets/index-assets/quote.svg" style="width: 24px; height: 24px;">
+              <p class="m-0" style="font-size: 24px; line-height: 150%; color: var(--gray-800)">
+                I find the Lumio 64 to be an impressive device. Its portability and ease of use really stand out to me, and the performance is solid overall. 
+                I especially appreciate the quality display and ergonomic design, which makes it perfect for retro gaming. 
+                It feels like the ideal choice for anyone into classic games.
+              </p>
+              
+              <div class="d-flex flex-row gap-3 flex-grow-1 align-items-end">
+                <img class="testimony-img" src="../assets/index-assets/testimonies/retrohandhelds.png" alt="partner">
+                <div class="d-flex flex-column justify-content-between">
+                  <p class="m-0 partner-name">Retro Handhelds</p>
+                  <p class="m-0 partner-designation">Retro Gaming Reviewer</p>
+                </div>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+      <div class="testimonies-overlay-left"></div>
+      <div class="testimonies-overlay-right"></div>
+      
+    </div>
+
+    <!-- News -->
+    <!-- Contact us / enquiry form -->
+
+    <!-- Footer -->
+    <footer class="d-flex w-100 flex-column align-items-end">
+      
+      <!-- Logo -->
+      <div class="d-flex align-items-center flex-grow-1 align-self-center py-4" style="padding: 0px 90px;">
+        <a href="index.html">
+          <img class="float-end mb-3" style="margin-right: -10%; width: 15%; height: auto" src="../assets/footer-assets/hearts.svg">
+          <img class="w-100" src="../assets/footer-assets/PYXELS.svg">
+        </a>
+      </div>
+      
+      <!-- Links -->
+      <div class="d-flex flex-row w-100 px-4 align-items-end flex-wrap">
+        <div class="d-flex flex-column py-4 px-3 gap-1 col-12 col-sm-6 col-lg-4 col-xl-2">
+          <div class="d-flex flex-row gap-1">
+            <a href=""><img class="socials" src="../assets/footer-assets/YouTube.svg"></a>
+            <a href=""><img class="socials" src="../assets/footer-assets/Instagram.svg"></a>
+          </div>
+          <div class="d-flex flex-row gap-1">
+            <a href=""><img class="socials" src="../assets/footer-assets/Facebook.svg"></a>
+            <a href=""><img class="socials" src="../assets/footer-assets/Twitter.svg"></a>
+          </div>
+        </div>
+        <div class="d-flex flex-column gap-1 py-4 px-4 col-12 col-sm-6 col-lg-4 col-xl-2">
+          <p>+65 6337 8290</p>
+          <a href="mailto: support@pyxels.com"><p>support@pyxels.com</p></a>
+          <p>24 New Industrial Rd, <br>#06-08 InSpace, <br>Singapore 536210</p>
+        </div>
+        <div class="d-flex flex-column gap-1 py-4 px-4 col-12 col-sm-6 col-lg-4 col-xl-2">
+          <p>Pyxel Collection</p>
+          <a href="lumio.html" style="font-family: 'MonsterFriendFore';"><p>Lumio 64</p></a>
+          <a href="voltio.html" style="font-family: 'MonsterFriendFore';"><p>Voltio Classic</p></a>
+        </div>
+        <div class="d-flex flex-column gap-1 py-4 px-4 col-12 col-sm-6 col-lg-4 col-xl-2">
+          <a href="about_us.html"><p>Behind the Pyxels</p></a>
+          <a href="featured-games.html"><p>Game Arcade</p></a>
+        </div>
+        <div class="d-flex flex-column gap-1 py-4 px-4 col-12 col-sm-6 col-lg-4 col-xl-2">
+          <a href="news.html"><p>Updates</p></a>
+          <a href="customer-support.html"><p>Support</p></a>
+          <a href="privacy_policy.html"><p>Privacy Policy</p></a>
+        </div>
+        <div class="d-flex flex-column gap-1 py-4 px-4 col-12 col-sm-6 col-lg-4 col-xl-2">
+          <p>&copy; Pyxels.<br>All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+
   </body>
 </html>

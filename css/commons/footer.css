@@ -1,0 +1,24 @@
+footer {
+  font-family: "Bricolage Grotesque";
+  min-height: 700px;
+}
+
+footer a {
+ text-decoration: none;
+ color: var(--secondary-background-color);
+ margin: 0px;
+ transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+footer p {
+  margin: 0px;
+}
+
+footer a:hover {
+  color: var(--pink-200);
+}
+
+.socials {
+  width: 44px;
+  height: 44px;
+}

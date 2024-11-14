@@ -1,0 +1,33 @@
+<svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M200 100H100V0H0V200H50V276H75V296H125H175H225V276H250V200H300V0H200V100Z" fill="url(#paint0_linear_323_20483)"/>
+<rect x="82" y="181" width="12" height="12" fill="#FDD836"/>
+<rect x="94" y="193" width="12" height="12" fill="#FDD836"/>
+<rect x="94" y="205" width="12" height="12" fill="#FDD836"/>
+<rect x="106" y="181" width="12" height="12" fill="#FDD836"/>
+<rect x="106" y="193" width="12" height="12" fill="#FDD836"/>
+<rect x="82" y="193" width="12" height="12" fill="#FDD836"/>
+<rect x="182" y="181" width="12" height="12" fill="#FDD836"/>
+<rect x="194" y="193" width="12" height="12" fill="#FDD836"/>
+<rect x="194" y="205" width="12" height="12" fill="#FDD836"/>
+<rect x="206" y="181" width="12" height="12" fill="#FDD836"/>
+<rect x="206" y="193" width="12" height="12" fill="#FDD836"/>
+<rect x="182" y="193" width="12" height="12" fill="#FDD836"/>
+<rect x="90" y="240" width="10" height="10" fill="#FDD836"/>
+<rect x="100" y="250" width="10" height="10" fill="#FDD836"/>
+<rect x="110" y="250" width="10" height="10" fill="#FDD836"/>
+<rect x="120" y="250" width="10" height="10" fill="#FDD836"/>
+<rect x="130" y="250" width="10" height="10" fill="#FDD836"/>
+<rect x="140" y="250" width="10" height="10" fill="#FDD836"/>
+<rect x="150" y="250" width="10" height="10" fill="#FDD836"/>
+<rect x="160" y="250" width="10" height="10" fill="#FDD836"/>
+<rect x="170" y="250" width="10" height="10" fill="#FDD836"/>
+<rect x="180" y="250" width="10" height="10" fill="#FDD836"/>
+<rect x="190" y="250" width="10" height="10" fill="#FDD836"/>
+<rect x="200" y="240" width="10" height="10" fill="#FDD836"/>
+<defs>
+<linearGradient id="paint0_linear_323_20483" x1="150" y1="0" x2="150" y2="296" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8D3AA6"/>
+<stop offset="0.517963" stop-color="#A751C2"/>
+</linearGradient>
+</defs>
+</svg>

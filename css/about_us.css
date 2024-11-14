@@ -1,0 +1,85 @@
+.timeline-point {
+  font-family: 'MonsterFriendFore';
+  font-size: 40px;
+  color: var(--pink-200);
+  line-height: 130%;
+}
+
+.building {
+  position: absolute;
+  height: 64px;
+  width: 64px;
+  bottom: -64px;
+  left: 0px;
+  background-color: var(--pink-800);
+  display: none;
+  z-index: -1;
+}
+
+.meet-pyx-lg {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+}
+
+.meet-pyx-para {
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 100px 0px;
+  position: absolute;
+  top: 0px;
+}
+
+.gradient-mask {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%;
+  background: linear-gradient(180deg, rgba(30, 31, 32, 0.00) 0%, #1E1F20 100%);
+  mix-blend-mode: hard-light;
+}
+
+.community-mask {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%;
+  background: rgba(30, 31, 32, 0.40);
+  mix-blend-mode: hard-light;
+}
+
+.pyxel-community {
+  background-image: url('../assets/about-us-assets/pyxel-community.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.commitment {
+  background-image: url('../assets/about-us-assets/commitment.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.img-para {
+  width: 100%; 
+  z-index: 1; 
+  left: 50%; 
+  transform: translateX(-50%);
+}
+
+@media (min-width:768px) {
+  .building {
+    display: block;
+  }
+  .meet-pyx-para {
+    max-width: 648px;
+  }
+  .img-para {
+    max-width: 872px;
+  }
+}

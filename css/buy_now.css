@@ -1,0 +1,81 @@
+.test {
+  background-color: red;
+}
+
+.test2 {
+  background-color: green;
+}
+
+.shopping-header {
+  font-size: 48px;
+  line-height: 150%;
+  color: var(--secondary-background-color);
+  word-wrap: break-word; word-break: break-word;
+}
+
+.main-pdt-card {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border: 1px solid var(--gray-400);
+  cursor: pointer;
+}
+
+.main-pdt-card img, 
+.choose-pdt-card img {
+  width: 100%;
+  height: auto;
+}
+
+.main-pdt-card img {
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.choose-pdt-card img {
+  transition: all 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.choose-pdt-card {
+  width: 33%;
+  aspect-ratio: 1/1;
+  border: 1px solid var(--gray-400);
+  transition: all 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+  cursor: pointer;
+}
+
+.choose-pdt-card.selected {
+  border: transparent;
+  box-shadow: 0px 0px 16px 0px rgba(188, 104, 207, 0.40);
+}
+
+.choose-pdt-card.selected img {
+  opacity: 0.5;
+}
+
+.tag {
+  padding: 16px 24px;
+  border: 1px solid var(--gray-400);
+  color: var(--gray-700);
+  border-radius: 64px;
+  font-weight: 500;
+}
+
+.btn-outline-secondary.tag:hover {
+  border: 1px solid var(--primary-color) !important;
+}
+
+.btn-outline-secondary.tag.selected {
+  outline: 1px solid var(--primary-color);
+  color: var(--pink-500) !important;
+}
+
+.qty-btn {
+  cursor: pointer;
+}
+
+.specs-header {
+  font-weight: 600;
+  line-height: 150%;
+  color: var(--secondary-background-color);
+  flex: 0 0 100px;
+}
+
