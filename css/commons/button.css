@@ -1,3 +1,8 @@
+.btn {
+  padding: 16px !important; 
+  font-weight: 600;
+}
+
 .btn-primary {
   background-color: var(--primary-color);
   border-color: var(--primary-color);
@@ -69,4 +74,8 @@
   background-color: transparent !important;
   border-color: var(--primary-color) !important;
   color: var(--primary-color) !important;
+}
+
+.btn-outline-secondary {
+  border: 2px solid;
 }
