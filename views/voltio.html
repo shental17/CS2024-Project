@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pyxels - Retro Rebirth</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" href="../assets/pyxel-favicon.svg" type="image/svg">
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/voltio.css" />
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
+
+    <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script> 
+    <script src="../js/lenis_scroll.js"></script> 
+    <script src="../js/testimonies.js"></script> 
+  </head>
+  <body class="primary-background d-flex flex-column align-items-center overflow-hidden" style="overflow-x: hidden;">
+
+    <!-- Hero -->
+    <div class="d-flex flex-column justify-content-center min-vh-100 w-100">
+      <img class="d-none d-lg-block" src="../assets/voltio-assets/voltio-hero.svg" alt="hero-img" style="width: auto; height:auto;"> 
+      <img class="d-block d-lg-none" src="../assets/voltio-assets/index-hero-sm.svg" alt="hero-img" style="width: auto; height:90%;"> 
+    </div>
+
+    <!-- Offer -->
+    <div class="d-flex flex-row py-5 flex-wrap align-items-center" style="max-width: 1320px;">
+
+      <div class="d-flex flex-column gap-3 px-4 col-md-8 col-12">
+        <h1>Limited Time Offer</h1>
+        <p>Get ready to power up with the Lumio 64! For a limited time, enjoy 15% off your purchase of this premium retro gaming device. 
+          Don’t miss the chance to experience iconic games with cutting-edge performance and sleek design—at an exclusive launch price. Offer ends soon!</p>
+      </div>
+      <div class="d-flex flex-column justify-content-start py-4 px-4 col-md-4 col-12">
+        <p class="align-self-center" style="color: var(--secondary-color); font-weight: bold;">
+          <span style="font-size: 112px; line-height: 112px;">20%</span>
+          <span style="font-size: 32px;">OFF</span>
+        </p>
+        <div class="d-flex flex-column flex-sm-row gap-3">
+          <button type="button" class="btn btn-primary flex-grow-1">Buy Now</button>
+          <button type="button" class="btn btn-outline-secondary">Learn More</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Product -->
+    <div class="secondary-background w-100 overflow-hidden position-relative" style="border-radius: 64px;">
+      <div class="d-flex flex-row flex-wrap pb-5">
+        <div class="d-flex justify-content-center justify-content-lg-start pt-5 col-12 col-lg-6">
+          <div class="d-flex flex-column px-3 px-lg-4 gap-4" style="max-width: 648px;">
+            <div class="d-flex flex-column gap-3 pt-5" style="padding-left: 100px;">
+              <div class="d-flex flex-row align-items-start gap-2">
+                <h4 style="color: var(--primary-background-color)" class="m-0">Nostalgic Design</h4>
+              </div>
+              <p>Drawing inspiration from many iconic consoles of the past, the Voltio Classic redesigns the compact, ergonomic shape that gamers love. Its comfortable, vintage-inspired design and intuitive layout, complete with a classic d-pad, bring a all too familiar feel that makes each gaming experience a trip down memory lane.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6 d-flex justify-content-center align-items-center">
+          <img style="width: 100%; height: 100%; object-fit: contain;" src="../assets/voltio-assets/voltio-1.png" alt="voltio 64">
+        </div>
+      </div>
+
+      <div class="d-flex flex-row flex-wrap pb-5">
+        <div class="col-12 col-lg-6 d-flex justify-content-center align-items-center">
+          <img style="width: 100%; height: 100%; object-fit: contain;" src="../assets/voltio-assets/voltio-2.png" alt="voltio 64">
+        </div>
+        <div class="d-flex justify-content-center justify-content-lg-start pt-5 col-12 col-lg-6">
+          <div class="d-flex flex-column px-3 px-lg-4 gap-4" style="max-width: 648px; padding-right: 100px;">
+            <div class="d-flex flex-column gap-3 pt-5" style="padding-left: 100px;">
+              <div class="d-flex flex-row align-items-start gap-2">
+                <h4 style="color: var(--primary-background-color)" class="m-0">Enhanced with Modern Playability</h4>
+              </div>
+              <p>While staying true to its retro roots, the Voltio Classic puts together modern features for the best performance. Four well-positioned rear buttons, two on each side, add an extra layer of versatility, allowing for more diverse gameplay without giving up on the old-school aesthetic. Every button feels responsive and natural, designed to keep up with fast-paced action.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="d-flex flex-column align-items-center px-4" style="padding: 100px 0px; gap: var(--spacing-6)">
+        <div class="d-flex justify-content-center align-items-center col-12 col-md-4 mb-4" style="width: 100%;">
+          <div class="threevoltio-img">
+            <img src="../assets/voltio-assets/index-voltio.png" alt="voltio 64" style="width: 100%; height: auto;">
+          </div>
+        </div>
+        <div class="d-flex flex-row justify-content-center col-12 col-md-8 gap-5 mx-auto">
+          <div class="d-flex flex-column justify-content-start px-3 gap-4 col-12 col-md-4">
+            <h4 style="color: var(--primary-background-color)" class="m-0">Vintage Grey</h4>
+            <p style="white-space: normal;">A nostalgic nod to classic consoles of the past, this muted grey incorporates a combination of authenticity and originality.</p>
+          </div>
+          <div class="d-flex flex-column justify-content-start px-3 gap-4 col-12 col-md-4">
+            <h4 style="color: var(--primary-background-color)" class="m-0">Retro Orange</h4>
+            <p style="white-space: normal;">Bold and Vibrant, this colour brings an exciting and playful twist to the console, giving the spirit of an energetic retro gaming era.</p>
+          </div>
+          <div class="d-flex flex-column justify-content-start px-3 gap-4 col-12 col-md-4">
+            <h4 style="color: var(--primary-background-color)" class="m-0">Classic Black</h4>
+            <p style="white-space: normal;">A sleek, simple, yet timeless design that encapsulates the essence of retro gaming elegance, which is perfect for any style.</p>
+          </div>
+        </div>
+        <div class="d-flex flex-column align-items-center mt-4">
+          <div class="d-flex flex-row align-items-center gap-3 mb-3">
+            <p id="discountedPrice" style="font-size: 36px; color: var(--primary-color)">S$50.90</p>
+            <s id="originalPrice" style="font-size: 20px;">S$63.50</s>
+          </div>
+          <button type="button" class="btn btn-primary" style="width: 200px;">Buy Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Games -->
+    <div class="d-flex flex-column gap-5 justify-content-center overflow-hidden position-relative" style="margin-top: 100px;">
+      <div class="d-flex flex-column text-center px-4 align-self-center" style="max-width: 1096px;">
+        <h1 style="color: var(--secondary-background-color)"><span style="color: var(--pink-200)">+</span> Games</h1>
+        <p style="font-size: 20px; line-height: 150%;" class="pt-4">Step into the golden era of gaming with the Voltio Classic. From timeless platformers to all kinds of action games, the Voltio Classic brings back the thrill of retro gaming with smooth performance and crisp visuals, keeping to the original experience.</p>
+      </div>
+    </div>
+      <div class="d-flex justify-content-center align-items-center col-12 col-md-4" style="width: 100%; max-width: 100%;">
+        <img class="custom-image" src="../assets/voltio-assets/games.png" alt="voltio 64" style="width: 100%; height: auto;">
+      </div>
+    <div class="d-flex flex-column gap-5 justify-content-center overflow-hidden position-relative" style="margin-bottom: 100px;">
+      <div class="d-flex flex-column text-center px-4 align-self-center" style="max-width: 1096px;">
+        <p style="font-size: 20px; line-height: 150%;" class="pt-4">With a vast library of over 15,000 classic games and 15+ emulators, Voltio Classic is your best way to experinceing retro gaming again. Rediscover the iconic titles that helped to shape a generation and relive the era of your favourite games. Dive in and enjoy endless hours of fun.</p>
+        <div class="d-flex flex-column align-items-center mt-4">
+        <button type="button" class="btn btn-warning" style="width: 200px;">Browse More</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Display -->
+    <div class="secondary-background d-flex flex-column gap-5 justify-content-center overflow-hidden position-relative w-100" style="border-radius: 64px; padding: 100px 0;">
+      <div class="container d-flex flex-column text-center px-4 align-self-center" style="max-width: 1096px;">
+        <h1 style="color: var(--primary-background-color)"><span style="color: var(--pink-200)">+</span> Display</h1>
+        <p style="font-size: 20px; line-height: 150%;" class="pt-4">
+          The Voltio Classic’s display breathes a brand new life into retro games, blending the different colours, details, and HD graphics together. Built to enhance visuals, it strikes the perfect balance between the vintage and modern graphics. Every pixel is carefully crafted to retain the original look while still having quality for today’s screens.
+        </p>
+      </div>
+      <div class="container d-flex justify-content-start flex-row flex-wrap">
+        <div class="d-flex justify-content-center justify-content-lg-start col-12 col-lg-6">
+          <div class="d-flex flex-column px-lg-4 gap-4" style="max-width: 648px; padding-right: 100px;">
+            <div class="d-flex flex-column gap-3 " style="padding-left: 100px;">
+              <div class="d-flex flex-row align-items-start gap-3">
+                <img src="../assets/lumio-assets/tick.svg" >
+                <h4 style="color: var(--primary-background-color)" class="m-0">High-Definition</h4>
+              </div>
+              <div class="d-flex flex-row align-items-start gap-3">
+                <img src="../assets/lumio-assets/tick.svg" >
+                <h4 style="color: var(--primary-background-color)" class="m-0">True to Classic Colours</h4>
+              </div>
+              <p>
+                Experience every game in sharp HD,  with colours that stay true to the original games. Optimized for the 4:3 retro style, it preserves the authenticity of the classic games, allowing you to enjoy the nostalgia just as it was meant to be, that of the past.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container d-flex justify-content-center gap-3">
+        <div class="col-12 col-lg-6 d-flex justify-content-center align-items-center">
+          <img style="width: 100%; height: 100%; object-fit: contain;" src="../assets/voltio-assets/display-1.png" alt="Lumio 64">
+        </div>
+      </div>
+      <div class="container d-flex justify-content-end flex-row flex-wrap">
+        <div class="d-flex justify-content-center justify-content-lg-start col-12 col-lg-6">
+          <div class="d-flex flex-column px-lg-4 gap-4" style="max-width: 648px; padding-right: 100px;">
+            <div class="d-flex flex-column gap-3 " style="padding-left: 100px;">
+              <div class="d-flex flex-row align-items-start gap-3">
+                <img src="../assets/lumio-assets/tick.svg" >
+                <h4 style="color: var(--primary-background-color)" class="m-0">Optimised Contrast</h4>
+              </div>
+              <div class="d-flex flex-row align-items-start gap-3">
+                <img src="../assets/lumio-assets/tick.svg" >
+                <h4 style="color: var(--primary-background-color)" class="m-0">Smooth Frame Rate</h4>
+              </div>
+              <p>
+                Enjoy the crystal-clear visibility in all kinds of setting. With the enhanced brightness and contrast, the Voltio Classic ensures that the colours stay vibrant and appealing. The high frame rate allows even the most intense action scenes to remain fluid and immersive.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <!-- Relive the classics -->
+      <div class="d-flex flex-row justify-content-center align-items-center" 
+          style="background-color: var(--secondary-color); border-radius: 64px; padding: 80px; margin: 0 auto;">
+        <div class="text-left" style="flex: 1; padding-right: 40px;">
+          <h1 style="color: var(--secondary-background-color); margin: 0; font-size: 64px;">
+            READY TO JUMP BACK IN?
+          </h1>
+        </div>
+        <div class="text-right" style="flex: 1; text-align: center;">
+          <h3 class="mb-3" style="color: var(--secondary-background-color); padding-bottom: 24px;">
+            Rediscover your favourite games, relive your nostalgic journey, just as you remember them.
+          </h3>
+          <button type="button" class="btn btn-primary" style="width: 200px;">
+            Buy Now
+          </button>
+        </div>
+      </div>
+
+        <!-- Performance -->
+        <div class="d-flex flex-column gap-5 justify-content-center overflow-hidden position-relative" style="padding: 100px 0;">
+          <div class="d-flex flex-column text-center px-4 align-self-center" style="max-width: 1096px;">
+            <h1 style="color: var(--secondary-background-color)"><span style="color: var(--pink-200)">+</span> Performance</h1>
+            <p style="font-size: 20px; line-height: 150%;" class="pt-4">Engineered for a seamless gameplay, the Lumio 64 has the ability to offer classic games a smooth, delay-free performance. Optimized to handle many retro titles, its efficient processing ensures every game runs with no slowdowns. </p>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-center align-items-center col-12 col-md-4" style="width: 100%; border-radius: 64px; max-width: 100%;">
+          <img class="custom-image" src="../assets/voltio-assets/performance.png" alt="voltio 64" style="width: 100%; height: auto;">
+        </div>
+
+        <div class="container">
+          <div class="row mx-auto justify-content-between" style="padding-left: 48px; padding-right: 48px; padding-top: 48px; padding-bottom: 48px;">
+            <div class="col-12 col-md-5 d-flex flex-column gap-3">
+              <div class="d-flex flex-row align-items-center gap-3">
+                <img src="../assets/voltio-assets/performance-1.svg">
+                <h4 class="mb-0">GPU: Dual-Core G31 MP2</h4>
+              </div>
+              <p>Fueled by the powerful dual-core G31 MP2 graphics processor, the Voltio Classic ensures smooth, sharp visuals with a responsive gameplay, making all games it run efficient and with minimal lag.</p>
+            </div>
+            <div class="col-12 col-md-5 d-flex flex-column gap-3">
+              <div class="d-flex flex-row align-items-center gap-3">
+                <img src="../assets/voltio-assets/performance-2.svg">
+                <h4 class="mb-0">RAM: LPDDR4 1GB</h4>
+              </div>
+              <p>With 1GB of LPDDR4 memory, the Voltio Classic handles quick save and load times, with smooth transitions, making every game experience seamless and fluid.</p>
+            </div>
+          </div>
+
+          <div class="row mx-auto justify-content-between" style="padding-left: 48px; padding-right: 48px; padding-bottom: 48px;">
+            <div class="col-12 col-md-5 d-flex flex-column gap-3">
+              <div class="d-flex flex-row align-items-center gap-3">
+                <img src="../assets/voltio-assets/performance-3.svg">
+                <h4 class="mb-0">ROM: 64GB TF/Micro SD</h4>
+              </div>
+              <p>Built with a 64GB of expandable storage with TF/Micro SD, there is ample room for your favourite games collection, making it possible to carry many titles wherever you go.</p>
+            </div>
+            <div class="col-12 col-md-5 d-flex flex-column gap-3">
+              <div class="d-flex flex-row align-items-center gap-3">
+                <img src="../assets/voltio-assets/performance-4.svg">
+                <h4 class="mb-0">Battery: 3100mAh</h4>
+              </div>
+              <p>With 31000mAh, the Voltio Classic has one of the longest lasting battery life as a retro pocket, offering up to 8 lasting hours on a full charge, ensuring less frequent recharges.</p>
+            </div>
+          </div>
+        </div>
+
+
+    <!-- Product Specifications -->
+    <div class="d-flex flex-column w-100" style="padding: 100px 0px; max-width: 1096px;">
+      <h1 class="text-center px-3" style="color: var(--secondary-background-color); word-wrap: break-word; word-break: break-word;"><span style="color: var(--pink-200)">+</span> Product Specifications</h1>
+      <div class="d-flex justify-content-center align-items-center col-12 col-md-4" style="width: 100%; max-width: 100%;">
+        <img src="../assets/voltio-assets/prod-spec.svg" alt="voltio classic" style="width: 100%; height: auto; padding: 48px 0">
+      </div>
+      <div class="d-flex flex-column gap-5">
+        <div class="d-flex flex-row flex-wrap">
+          <div class="d-flex flex-column px-4 pt-5 gap-5 col-12 col-md-6">
+
+            <div class="d-flex flex-row align-items-start gap-2">
+              <h6 class="m-0 specs-header">Colours:</h6>
+              <p class="m-0 specs-p">Vintage Grey, Retro Orange, Classic Black</p>
+            </div>
+            <div class="d-flex flex-row align-items-start gap-2">
+              <h6 class="m-0 specs-header">Screen:</h6>
+              <p class="m-0 specs-p">2.83-inch IPS full viewing angle, OCA full lamination, resolution: 640*480</p>
+            </div>
+            <div class="d-flex flex-row align-items-start gap-2">
+              <h6 class="m-0 specs-header">CPU:</h6>
+              <p class="m-0 specs-p">H700 quad-core ARM Cortex-A53</p>
+            </div>
+            <div class="d-flex flex-row align-items-start gap-2">
+              <h6 class="m-0 specs-header">GPU:</h6>
+              <p class="m-0 specs-p">Dual-Core G31 MP2</p>
+            </div>
+            <div class="d-flex flex-row align-items-start gap-2">
+              <h6 class="m-0 specs-header">RAM:</h6>
+              <p class="m-0 specs-p">LPDDR4 1GB</p>
+            </div>
+            
+          </div>
+
+          <div class="d-flex flex-column px-4 pt-5 gap-5 col-12 col-md-6">
+            
+            <div class="d-flex flex-row align-items-start gap-2">
+              <h6 class="m-0 specs-header">Storage:</h6>
+              <p class="m-0 specs-p">64GB TF/MicroSD</p>
+            </div>
+            <div class="d-flex flex-row align-items-start gap-2">
+              <h6 class="m-0 specs-header">System:</h6>
+              <p class="m-0 specs-p">Linux</p>
+            </div>
+            <div class="d-flex flex-row align-items-start gap-2">
+              <h6 class="m-0 specs-header">Speaker:</h6>
+              <p class="m-0 specs-p">High-fidelity speaker</p>
+            </div>
+            <div class="d-flex flex-row align-items-start gap-2">
+              <h6 class="m-0 specs-header">Battery:</h6>
+              <p class="m-0 specs-p">Li-polymer battery 3200mAh, lasting 6 hours</p>
+            </div>
+            <div class="d-flex flex-row align-items-start gap-2">
+              <h6 class="m-0 specs-header">TF card:</h6>
+              <p class="m-0 specs-p">Dual card slots, support TF card expansion, maximum 512GB</p>
+            </div>
+            
+          </div>
+        </div>
+
+        <!-- Others -->
+        <div class="d-flex flex-row align-items-start gap-2 px-4">
+          <h6 class="m-0 specs-header">Others:</h6>
+          <p class="m-0 specs-p">2.4 G wireless controller and wired controller connection, HD connection to monitor, file manager, expert mode, WIFI online pairing, streaming, vibration. 
+            Supports music player with formats such as FLAC, MP3, WAV, APE, AIF, AIFF, OGG, WMA, AAC, M4A, M4R, file manager, expert mode, e-book reader (supports TXT format).</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Retro Approved -->
+    <div class="secondary-background w-100 d-flex flex-column gap-5 justify-content-center overflow-hidden position-relative" style="border-radius: 64px; padding: 100px 0px;">
+      <div class="d-flex flex-column text-center px-4 align-self-center" style="max-width: 1096px;">
+        <h1 style="color: var(--primary-background-color)"><span style="color: var(--pink-200)">+</span> Retro Approved</h1>
+        <p style="font-size: 20px; line-height: 150%;">From their sleek, portable design to its stunning screen quality and extensive retro game support, our Pyxel Collection has earned high marks for delivering an authentic gaming experience. 
+          These are genuine insights, compiled from top reviewers, spotlighting why our Pyxel Collection is a must-have for both casual and dedicated retro gamers. 
+          Dive into the praise and see why this device is celebrated as a perfect blend of nostalgia and modern functionality.</p>
+      </div>
+
+      <!-- Infinite scroll -->
+      <div class="d-flex flex-row gap-4 px-5 position-relative" style="width: 5000px;">
+        <div class="d-flex flex-row gap-4 justify-content-start testimonies py-1">
+
+          <a href="https://www.youtube.com/watch?v=3Nq2Q_BzFrU" target="_blank" class="d-flex flex-grow-1">
+            <div class="testimony d-flex flex-column p-4 gap-4">
+              <img src="../assets/voltio-assets/quote.svg" style="width: 24px; height: 24px;">
+              <p class="m-0" style="font-size: 24px; line-height: 150%; color: var(--gray-800)">
+                With custom firmware support, this device goes from good to great. 
+                It’s amazing how easily you can tweak it to suit exactly what you want from a retro console, making it ideal for both new fans and veteran gamers alike.
+              </p>
+              
+              <div class="d-flex flex-row gap-3 flex-grow-1 align-items-end">
+                <img class="testimony-img" src="../assets/voltio-assets/testimonies/vladnerd.png" alt="partner">
+                <div class="d-flex flex-column">
+                  <p class="m-0 partner-name">VladNerd</p>
+                  <p class="m-0 partner-designation">Gaming Hardware Specialist</p>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://retrohandhelds.gg/anbernic-rg40xxv-review/" target="_blank" class="d-flex flex-grow-1">
+            <div class="testimony d-flex flex-column p-4 gap-4">
+              <img src="../assets/voltio-assets/quote.svg" style="width: 24px; height: 24px;">
+              <p class="m-0" style="font-size: 24px; line-height: 150%; color: var(--gray-800)">
+                The 4-inch IPS screen is a game-changer in clarity and comfort, making every game pop with that perfect retro vibe. 
+                It’s not just bigger; it’s crisp and beautifully suited for all kinds of classic titles
+              </p>
+              
+              <div class="d-flex flex-row gap-3 flex-grow-1 align-items-end">
+                <img class="testimony-img" src="../assets/voltio-assets/testimonies/creative4gaming.png" alt="partner">
+                <div class="d-flex flex-column justify-content-between">
+                  <p class="m-0 partner-name">Creative4Gaming</p>
+                  <p class="m-0 partner-designation">Content Creator and Game Reviewer</p>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://retrododo.com/anbernic-rg40xx-v-review/" target="_blank" class="d-flex flex-grow-1">
+            <div class="testimony d-flex flex-column p-4 gap-4">
+              <img src="../assets/voltio-assets/quote.svg" style="width: 24px; height: 24px;">
+              <p class="m-0" style="font-size: 24px; line-height: 150%; color: var(--gray-800)">
+                With its ultra-narrow bezel and sharp 4-inch IPS screen, this device gives off that perfect retro vibe. 
+                It's a real blast for fans of vertical handhelds, though the rapid product releases by Pyxels might make it harder for owners to keep up with all the update.
+              </p>
+              
+              <div class="d-flex flex-row gap-3 flex-grow-1 align-items-end">
+                <img class="testimony-img" src="../assets/voltio-assets/testimonies/retrododo.png" alt="partner">
+                <div class="d-flex flex-column justify-content-between">
+                  <p class="m-0 partner-name">RetroDodo</p>
+                  <p class="m-0 partner-designation">Retro Gaming Blog</p>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://www.youtube.com/watch?v=ECe4Lak58fY" target="_blank" class="d-flex flex-grow-1">
+            <div class="testimony d-flex flex-column p-4 gap-4">
+              <img src="../assets/voltio-assets/quote.svg" style="width: 24px; height: 24px;">
+              <p class="m-0" style="font-size: 24px; line-height: 150%; color: var(--gray-800)">
+                Pyxels really hit it out of the park with this design. 
+                It's like a tribute to classic handhelds but with modern features, giving you the best of both worlds in a portable, durable package.
+              </p>
+              
+              <div class="d-flex flex-row gap-3 flex-grow-1 align-items-end">
+                <img class="testimony-img" src="../assets/voltio-assets/testimonies/retrogamecorps.png" alt="partner">
+                <div class="d-flex flex-column">
+                  <p class="m-0 partner-name">Retro Game Corps</p>
+                  <p class="m-0 partner-designation">Retro Gaming Expert</p>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://droix.net/blogs/anbernic-rg-40xxv-review/" target="_blank" class="d-flex flex-grow-1">
+            <div class="testimony d-flex flex-column p-4 gap-4">
+              <img src="../assets/voltio-assets/quote.svg" style="width: 24px; height: 24px;">
+              <p class="m-0" style="font-size: 24px; line-height: 150%; color: var(--gray-800)">
+                The display on this device is phenomenal—it’s an amazing 4” screen that really enhances the handheld experience. 
+                The RGB lighting around the analog stick just adds that extra touch that makes it feel customizable and modern.
+              </p>
+              
+              <div class="d-flex flex-row gap-3 flex-grow-1 align-items-end">
+                <img class="testimony-img" src="../assets/voltio-assets/testimonies/droix.png" alt="partner">
+                <div class="d-flex flex-column justify-content-between">
+                  <p class="m-0 partner-name">DroiX</p>
+                  <p class="m-0 partner-designation">Retro Gaming Store Owner</p>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://odysee.com/@RetroHandhelds:c/anbernic-rg40xxv-review-this-might-be-my:3" target="_blank" class="d-flex flex-grow-1">
+            <div class="testimony d-flex flex-column p-4 gap-4">
+              <img src="../assets/voltio-assets/quote.svg" style="width: 24px; height: 24px;">
+              <p class="m-0" style="font-size: 24px; line-height: 150%; color: var(--gray-800)">
+                I find the Lumio 64 to be an impressive device. Its portability and ease of use really stand out to me, and the performance is solid overall. 
+                I especially appreciate the quality display and ergonomic design, which makes it perfect for retro gaming. 
+                It feels like the ideal choice for anyone into classic games.
+              </p>
+              
+              <div class="d-flex flex-row gap-3 flex-grow-1 align-items-end">
+                <img class="testimony-img" src="../assets/voltio-assets/testimonies/retrohandhelds.png" alt="partner">
+                <div class="d-flex flex-column justify-content-between">
+                  <p class="m-0 partner-name">Retro Handhelds</p>
+                  <p class="m-0 partner-designation">Retro Gaming Reviewer</p>
+                </div>
+              </div>
+            </div>
+          </a>
+
+        </div>
+
+        <div class="d-flex flex-row gap-4 justify-content-start testimonies py-1">
+
+          <a href="https://www.youtube.com/watch?v=3Nq2Q_BzFrU" target="_blank" class="d-flex flex-grow-1">
+            <div class="testimony d-flex flex-column p-4 gap-4">
+              <img src="../assets/voltio-assets/quote.svg" style="width: 24px; height: 24px;">
+              <p class="m-0" style="font-size: 24px; line-height: 150%; color: var(--gray-800)">
+                With custom firmware support, this device goes from good to great. 
+                It’s amazing how easily you can tweak it to suit exactly what you want from a retro console, making it ideal for both new fans and veteran gamers alike.
+              </p>
+              
+              <div class="d-flex flex-row gap-3 flex-grow-1 align-items-end">
+                <img class="testimony-img" src="../assets/voltio-assets/testimonies/vladnerd.png" alt="partner">
+                <div class="d-flex flex-column">
+                  <p class="m-0 partner-name">VladNerd</p>
+                  <p class="m-0 partner-designation">Gaming Hardware Specialist</p>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://retrohandhelds.gg/anbernic-rg40xxv-review/" target="_blank" class="d-flex flex-grow-1">
+            <div class="testimony d-flex flex-column p-4 gap-4">
+              <img src="../assets/voltio-assets/quote.svg" style="width: 24px; height: 24px;">
+              <p class="m-0" style="font-size: 24px; line-height: 150%; color: var(--gray-800)">
+                The 4-inch IPS screen is a game-changer in clarity and comfort, making every game pop with that perfect retro vibe. 
+                It’s not just bigger; it’s crisp and beautifully suited for all kinds of classic titles
+              </p>
+              
+              <div class="d-flex flex-row gap-3 flex-grow-1 align-items-end">
+                <img class="testimony-img" src="../assets/voltio-assets/testimonies/creative4gaming.png" alt="partner">
+                <div class="d-flex flex-column justify-content-between">
+                  <p class="m-0 partner-name">Creative4Gaming</p>
+                  <p class="m-0 partner-designation">Content Creator and Game Reviewer</p>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://retrododo.com/anbernic-rg40xx-v-review/" target="_blank" class="d-flex flex-grow-1">
+            <div class="testimony d-flex flex-column p-4 gap-4">
+              <img src="../assets/voltio-assets/quote.svg" style="width: 24px; height: 24px;">
+              <p class="m-0" style="font-size: 24px; line-height: 150%; color: var(--gray-800)">
+                With its ultra-narrow bezel and sharp 4-inch IPS screen, this device gives off that perfect retro vibe. 
+                It's a real blast for fans of vertical handhelds, though the rapid product releases by Pyxels might make it harder for owners to keep up with all the update.
+              </p>
+              
+              <div class="d-flex flex-row gap-3 flex-grow-1 align-items-end">
+                <img class="testimony-img" src="../assets/voltio-assets/testimonies/retrododo.png" alt="partner">
+                <div class="d-flex flex-column justify-content-between">
+                  <p class="m-0 partner-name">RetroDodo</p>
+                  <p class="m-0 partner-designation">Retro Gaming Blog</p>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://www.youtube.com/watch?v=ECe4Lak58fY" target="_blank" class="d-flex flex-grow-1">
+            <div class="testimony d-flex flex-column p-4 gap-4">
+              <img src="../assets/voltio-assets/quote.svg" style="width: 24px; height: 24px;">
+              <p class="m-0" style="font-size: 24px; line-height: 150%; color: var(--gray-800)">
+                Pyxels really hit it out of the park with this design. 
+                It's like a tribute to classic handhelds but with modern features, giving you the best of both worlds in a portable, durable package.
+              </p>
+              
+              <div class="d-flex flex-row gap-3 flex-grow-1 align-items-end">
+                <img class="testimony-img" src="../assets/voltio-assets/testimonies/retrogamecorps.png" alt="partner">
+                <div class="d-flex flex-column">
+                  <p class="m-0 partner-name">Retro Game Corps</p>
+                  <p class="m-0 partner-designation">Retro Gaming Expert</p>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://droix.net/blogs/anbernic-rg-40xxv-review/" target="_blank" class="d-flex flex-grow-1">
+            <div class="testimony d-flex flex-column p-4 gap-4">
+              <img src="../assets/voltio-assets/quote.svg" style="width: 24px; height: 24px;">
+              <p class="m-0" style="font-size: 24px; line-height: 150%; color: var(--gray-800)">
+                The display on this device is phenomenal—it’s an amazing 4” screen that really enhances the handheld experience. 
+                The RGB lighting around the analog stick just adds that extra touch that makes it feel customizable and modern.
+              </p>
+              
+              <div class="d-flex flex-row gap-3 flex-grow-1 align-items-end">
+                <img class="testimony-img" src="../assets/voltio-assets/testimonies/droix.png" alt="partner">
+                <div class="d-flex flex-column justify-content-between">
+                  <p class="m-0 partner-name">DroiX</p>
+                  <p class="m-0 partner-designation">Retro Gaming Store Owner</p>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://odysee.com/@RetroHandhelds:c/anbernic-rg40xxv-review-this-might-be-my:3" target="_blank" class="d-flex flex-grow-1">
+            <div class="testimony d-flex flex-column p-4 gap-4">
+              <img src="../assets/voltio-assets/quote.svg" style="width: 24px; height: 24px;">
+              <p class="m-0" style="font-size: 24px; line-height: 150%; color: var(--gray-800)">
+                I find the Lumio 64 to be an impressive device. Its portability and ease of use really stand out to me, and the performance is solid overall. 
+                I especially appreciate the quality display and ergonomic design, which makes it perfect for retro gaming. 
+                It feels like the ideal choice for anyone into classic games.
+              </p>
+              
+              <div class="d-flex flex-row gap-3 flex-grow-1 align-items-end">
+                <img class="testimony-img" src="../assets/voltio-assets/testimonies/retrohandhelds.png" alt="partner">
+                <div class="d-flex flex-column justify-content-between">
+                  <p class="m-0 partner-name">Retro Handhelds</p>
+                  <p class="m-0 partner-designation">Retro Gaming Reviewer</p>
+                </div>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+      <div class="testimonies-overlay-left"></div>
+      <div class="testimonies-overlay-right"></div>
+      
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+  </body>
+</html>

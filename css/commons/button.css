@@ -42,6 +42,24 @@
   border-color: var(--disabled-color) !important;
   color: var(--on-disabled-color) !important;
 }
+/* button tag */
+.btn-outline-warning {
+  background-color: transparent !important;
+  border-color: var(--secondary-color) !important;
+  color: var(--secondary-color) !important;
+}
+.btn-outline-warning:hover {
+  background-color: transparent !important;
+  border-color: var(--secondary-color-hover) !important;
+  color: var(--secondary-color-hover) !important;
+}
+
+.btn-outline-warning:active,
+.btn-outline-warning.active {
+  background-color: transparent !important;
+  border-color: var(--secondary-color-active) !important;
+  color: var(--secondary-color-active) !important;
+}
 
 /* button tag */
 .btn-outline-secondary:hover,

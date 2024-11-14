@@ -1,0 +1,47 @@
+#customer-support h1 {
+  color: var(--base-white);
+  text-align: center;
+}
+
+#customer-support .logo {
+  color: var(--pink-200);
+}
+
+#customer-support .container {
+  padding: var(--spacing-6) 0;
+}
+
+#customer-support .accordion-item {
+  background-color: transparent;
+  border: none;
+  color: var(--base-black);
+  margin-bottom: var(--spacing-1);
+  border-radius: var(--spacing-1);
+  overflow: hidden;
+}
+
+#customer-support .accordion-button {
+  background-color: var(--yellow-700);
+  border-radius: var(--spacing-1);
+}
+
+#customer-support .accordion-body {
+  background-color: var(--yellow-500);
+  border: none;
+}
+
+#customer-support span,
+#customer-support a {
+  color: var(--primary-color);
+}
+
+#customer-support #contact form {
+  border-radius: 32px;
+}
+#customer-support #contact form label,
+#customer-support #contact h3 {
+  color: var(--base-black);
+}
+#customer-support #contact form .form-select {
+  color: var(--gray-600);
+}

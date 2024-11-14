@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
   requestAnimationFrame(raf);
 });
 
+
 document.addEventListener("scroll", function() {
 
   const navbar = document.getElementById("navbar");

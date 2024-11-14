@@ -109,11 +109,13 @@
   --primary-color: var(--pink-400);
   --primary-color-hover: var(--pink-500);
   --primary-color-active: var(--pink-600);
+  --on-primary-color: var(--base-white);
 
   /* Secondary Color */
   --secondary-color: var(--yellow-800);
   --secondary-color-hover: var(--yellow-900);
   --secondary-color-active: #c57e0b;
+  --on-secondary-color: var(--base-white);
 
   /* Disabled Color */
   --disabled-color: var(--gray-200);
