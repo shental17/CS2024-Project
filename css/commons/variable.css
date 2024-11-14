@@ -75,7 +75,7 @@
   /* Text Style */
   /* Body */
   --body-font: "Space Grotesk", sans-serif;
-  --body-font-size: 14px;
+  --body-font-size: 16px;
   --body-line-height: 150%;
   --body-font-weight: normal; /* Regular */
 
@@ -103,7 +103,7 @@
 
   /* Secondary Background Colors */
   --secondary-background-color: var(--base-white);
-  --on-secondary-background-color: var(var(--gray-600));
+  --on-secondary-background-color: var(--gray-600);
 
   /* Primary Color */
   --primary-color: var(--pink-400);

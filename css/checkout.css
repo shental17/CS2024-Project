@@ -1,0 +1,56 @@
+.test {
+  background-color: red;
+}
+
+.test2 {
+  background-color: green;
+}
+
+.checkout-header {
+  font-size: 60px;
+  line-height: 150%;
+  color: var(--secondary-background-color);
+}
+
+.tag {
+  padding: 16px 24px;
+  border: 1px solid var(--gray-400);
+  color: var(--gray-700);
+  border-radius: 64px;
+  font-weight: 500;
+}
+
+.checkout-form {
+  max-width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+}
+
+.form-control {
+  height: 52px; 
+  font-size: 16px; 
+  padding: 16px; 
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+@media (min-width: 768px) {
+  .checkout-form {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .checkout-form {
+    max-width: 800px; 
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+.d-flex .form-control {
+  margin-bottom: 15px; 
+}
