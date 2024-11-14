@@ -26,6 +26,7 @@
   padding-bottom: 800px; 
   height: 0; 
   overflow: hidden;
+  border-radius: 64px;
 }
 
 .video-mask {
@@ -189,4 +190,3 @@
     display: block;
   }
 }
-
