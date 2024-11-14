@@ -34,3 +34,14 @@
 #customer-support a {
   color: var(--primary-color);
 }
+
+#customer-support #contact form {
+  border-radius: 32px;
+}
+#customer-support #contact form label,
+#customer-support #contact h3 {
+  color: var(--base-black);
+}
+#customer-support #contact form .form-select {
+  color: var(--gray-600);
+}

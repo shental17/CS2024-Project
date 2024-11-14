@@ -30,24 +30,111 @@
       </div>
       <section>
         <div class="container-fluid content">
-            <div class="col-12">
-                <table class="table table-bordered table-hover table-responsive-md">
-                    <thead class="thead-light">
-                        <tr>
-                            <th scope="col">Product</th>
-                            <th scope="col">Price</th>
-                            <th scope="col">Quantity</th>
-                            <th scope="col">Total Price</th>
-                            <th scope="col"></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Retro Lumios</td>
-                            <td>$200</td>
-                        </tr>
-                    </tbody>
-                </table>
+          <div class="row">
+            <div class="col-12 col-lg-9 p-4">
+              <table class="table borderless-table table-responsive-md">
+                <thead>
+                  <tr class="d-none d-md-table-row">
+                    <th colspan="7">Product</th>
+                    <th colspan="1">Price</th>
+                    <th colspan="2">Quantity</th>
+                    <th colspan="1">Total Price</th>
+                  </tr>
+                  <tr class="d-md-none">
+                    <th colspan="12">Product</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="d-none d-md-table-row">
+                    <!-- Product Image -->
+                    <td colspan="4">
+                      <div class="product-image-wrapper">
+                        <img
+                          src="../assets/retro-lumios-white-vertical.png"
+                          alt="Product Image"
+                          class="img-fluid"
+                          style="max-width: 100%"
+                        />
+                      </div>
+                    </td>
+                    <!-- Product Name -->
+                    <td colspan="3">
+                      <div>
+                        <h6>Pyxel's Lumio 64</h6>
+                        <p>Vintage White</p>
+                      </div>
+                    </td>
+                    <!-- Product Price -->
+                    <td colspan="1">
+                      <h6>$50.00</h6>
+                    </td>
+                    <!-- Quantity Container -->
+                    <td colspan="2">
+                      <div
+                        class="quantity-container d-inline-flex align-items-center p-3"
+                      >
+                        <button class="btn btn-outline-secondary">-</button>
+                        <input
+                          type="text"
+                          value="2"
+                          class="form-control text-center mx-2"
+                        />
+                        <button class="btn btn-outline-secondary">+</button>
+                      </div>
+                    </td>
+                    <!-- Total Price -->
+                    <td colspan="1">
+                      <h6>$100.00</h6>
+                    </td>
+                    <!-- Delete Action -->
+                    <td colspan="1">
+                      <button class="btn btn-outline-secondary delete">
+                        <i class="bi bi-trash"></i>
+                        <!-- Using Bootstrap Icons -->
+                      </button>
+                    </td>
+                  </tr>
+                  <tr class="d-md-none">
+                    <td colspan="12">
+                      <div class="product-image-wrapper">
+                        <img
+                          src="../assets/retro-lumios-white-vertical.png"
+                          alt="Product Image"
+                          class="img-fluid"
+                          style="max-width: 100%"
+                        />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="d-md-none">
+                    <td colspan="10">
+                      <h6>Pyxel's Lumio 64</h6>
+                      <p>Vintage White</p>
+                      <h6>$50.00</h6>
+                      <div class="mb-4">
+                        <div
+                          class="quantity-container d-inline-flex align-items-center p-3"
+                        >
+                          <button class="btn btn-outline-secondary">-</button>
+                          <input
+                            type="text"
+                            value="2"
+                            class="form-control text-center mx-2"
+                          />
+                          <button class="btn btn-outline-secondary">+</button>
+                        </div>
+                      </div>
+                      <h6>Total: $100.00</h6>
+                    </td>
+                    <td colspan="2">
+                      <button class="btn btn-outline-secondary delete">
+                        <i class="bi bi-trash"></i>
+                        <!-- Using Bootstrap Icons -->
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
             <div class="order-summary col-12 col-lg-3 p-4">
               <h3 class="title py-3">Order Summary</h3>
@@ -65,17 +152,17 @@
                   <p>$9.00</p>
                 </div>
               </div>
-              <div class="total d-flex flex-row justify-content-between py-2 mb-4">
+              <div
+                class="total d-flex flex-row justify-content-between py-2 mb-4"
+              >
                 <h3>Total</h3>
                 <h3>$115.00</h3>
               </div>
               <div class="d-grid gap-2">
-                <button class="btn btn-warning">
-                  Checkout
-                </button>
+                <button class="btn btn-warning">Checkout</button>
                 <button class="btn btn-outline-warning">
-                    Continue Shopping
-                  </button>
+                  Continue Shopping
+                </button>
               </div>
             </div>
           </div>
