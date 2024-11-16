@@ -7,10 +7,6 @@
   color: var(--pink-200);
 }
 
-#customer-support .container {
-  padding: var(--spacing-6) 0;
-}
-
 #customer-support .accordion-item {
   background-color: transparent;
   border: none;
