@@ -77,5 +77,6 @@
 }
 
 .btn-outline-secondary {
-  border: 2px solid;
+  border: 2px solid var(--gray-400);
+  color: var(--gray-600);
 }
