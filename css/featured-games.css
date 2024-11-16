@@ -19,7 +19,8 @@
 #featured-games #supported-consoles .content,
 #featured-games #timeless-classics .content,
 #featured-games #retro-legends .content {
-  padding: var(--spacing-6);
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 #featured-games #supported-consoles .logo {
   color: var(--pink-200);
