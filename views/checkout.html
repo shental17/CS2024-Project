@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Securely complete your purchase and make retro gaming fun to life! Enjoy safe payment options, 
+    fast processing, and excellent support for your orders.">
     <title>Pyxels - Checkout</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -28,104 +30,167 @@
   </head>
   <body class="primary-background d-flex flex-column align-items-center">
 
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar navbar-dark bg-transparent fixed-top navbar-expand-lg px-4 py-4" >
+      <div class="container-fluid p-0 m-0">
+        <a class="navbar-brand p-0" href="index.html">
+          <img src="../assets/pyxels-logo.svg" alt="Pyxels">
+        </a>
+        <button class="navbar-toggler" type="button" 
+          data-bs-toggle="offcanvas" 
+          data-bs-target="#offcanvasDarkNavbar" 
+          aria-controls="offcanvasDarkNavbar" 
+          aria-label="Toggle navigation">
+          <i class='bx bx-menu-alt-right icon fs-2' style="color: var(--secondary-background-color)"></i>
+        </button>
+        
+        <div class="offcanvas offcanvas-end text-bg-dark" 
+          tabindex="-1" 
+          id="offcanvasDarkNavbar" 
+          aria-labelledby="offcanvasDarkNavbarLabel">
+
+          <div class="offcanvas-header">
+            <img class="offcanvas-title" src="../assets/pyxels-logo.svg" alt="Pyxels">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 gap-4" style="padding-right: 100px;">
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Pyxel Collection
+                  <i class='bx bx-chevron-down icon'></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="lumio.html">Lumio 64</a></li>
+                  <li><a class="dropdown-item" href="voltio.html">Voltio Classic</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="about_us.html">Behind the Pyxels</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="featured-games.html">Game Arcade</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="news.html">Updates</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="customer-support.html">Support</a>
+              </li>
+              
+              <a class="position-absolute cart-link" href="cart.html">
+                <div class="d-flex justify-content-center align-items-center cart-btn">
+                  <i class='bx bx-cart icon'></i>
+                </div>
+              </a>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </nav>
+
     <!-- Header -->
-    <div class="d-flex align-items-end" style="height: 300px;">
+    <div class="d-flex align-items-end" style="min-height: 240px; padding-top: 76px;">
       <h1 class="py-4 px-3 checkout-header">Checkout</h1>
     </div>
-
-    <div class="checkout-container d-flex justify-content-center" style="border-radius: 64px; width: 100%; padding: 50px; background-color: #f7f7f7;">
-      <div class="d-flex flex-wrap" style="max-width: 1320px;">
         
-    <!-- Order Summary -->
-    <div class="order-summary col-12 col-md-6 px-4">
+
+<div class="secondary-background d-flex flex-wrap justify-content-center py-4" style="border-radius: 64px; width: 100%;">
+  <!-- Order Summary -->
+  <div class="d-flex flex-wrap" style="width: 100%;">
+    <div class="col-12 col-lg-6 col-md-6 px-4 py-5">
       <h3 style="color: var(--primary-background-color)">Order Summary</h3>
-      <div style="margin-top: 20px;"></div>
-      <hr style="border-color: var(--primary-background-color); margin-top: 10px; margin-bottom: 15px;"/>
-      <div style="margin-bottom: 20px;"></div>
+      <hr class="mb-0" style="border-color: var(--primary-background-color); margin-top: 30px;"/>
 
-      <div class="d-flex flex-row justify-content-between my-3">
+      <div class="d-flex flex-row justify-content-between py-5">
         <div class="d-flex flex-row">
-          <img src="../assets/checkout-assets/lumio-64.png" alt="Product Image" style="width: 64px; height: 64px;"/>
+          <div class="product-border">
+          <img src="../assets/checkout-assets/lumio-64.png" alt="Product Image" class="img-fluid" style="width: 120px;"/>
+          </div>
           <div class="d-flex flex-column ms-3">
             <p style="color: var(--primary-background-color)">Pyxel's Lumio 64</p>
-            <p style="color: var(--primary-background-color)">Vintage White</p>
+            <p>Vintage White</p>
           </div>
         </div>
         <div class="d-flex flex-column ms-3 align-items-end">
           <p style="color: var(--primary-background-color)">$50.00</p>
-          <p style="color: var(--primary-background-color)">Qty: 2</p>
+          <p>Qty: 2</p>
         </div>
       </div>
 
-      <div class="d-flex flex-row justify-content-between my-3">
+      <div class="d-flex flex-row justify-content-between">
         <div class="d-flex flex-row">
-          <img src="../assets/checkout-assets/lumio-64.png" alt="Product Image" style="width: 64px; height: 64px;"/>
+          <div class="product-border">
+          <img src="../assets/checkout-assets/lumio-64.png" alt="Product Image" class="img-fluid" style="width: 120px;"/>
+        </div>
           <div class="d-flex flex-column ms-3">
             <p style="color: var(--primary-background-color)">Pyxel's Lumio 64</p>
-            <p style="color: var(--primary-background-color)">Vintage White</p>
+            <p >Vintage White</p>
           </div>
         </div>
         <div class="d-flex flex-column ms-3 align-items-end">
           <p style="color: var(--primary-background-color)">$50.00</p>
-          <p style="color: var(--primary-background-color)">Qty: 2</p>
+          <p>Qty: 2</p>
         </div>
       </div>
 
-      <hr style="border-color: var(--primary-background-color); margin-top: 15px; margin-bottom: 15px;"/>
 
-      <div class="d-flex flex-row my-3">
+      <div class="d-flex flex-row py-4">
         <input type="text" class="form-control" placeholder="Discount Code" style="flex: 1;" />
-        <button class="btn btn-secondary ms-2" style="height: 52px;">Apply</button>
+        <button class="btn btn-secondary ms-2" style="height: 52px; margin-top: 16px;">Apply</button>
       </div>
 
       <div class="d-flex flex-column">
-        <div class="d-flex justify-content-between">
-          <p style="color: var(--primary-background-color)">Subtotal:</p>
-          <p style="color: var(--primary-background-color)">$100.00</p>
-        </div>
-        <div class="d-flex justify-content-between">
-          <p style="color: var(--primary-background-color)">Shipping:</p>
-          <p style="color: var(--primary-background-color)">$5.00</p>
-        </div>
-        <div class="d-flex justify-content-between">
-          <p style="color: var(--primary-background-color)">Estimated GST:</p>
-          <p style="color: var(--primary-background-color)">$9.00</p>
-        </div>
-        <div class="d-flex justify-content-between">
-          <p style="color: var(--primary-background-color)">Total:</p>
-          <p style="color: var(--primary-background-color)"><strong>$115.00</strong></p>
+          <div class="d-flex flex-row justify-content-between">
+            <p>Subtotal</p>
+            <p>$100.00</p>
+          </div>
+          <div class="d-flex flex-row justify-content-between">
+            <p>Shipping</p>
+            <p>$5.90</p>
+          </div>
+          <div class="d-flex flex-row justify-content-between">
+            <p>Estimated GST</p>
+            <p>$9.00</p>
+          </div>
+        <hr style="border-color: var(--primary-background-color);"/>
+        <div
+          class="total d-flex flex-row justify-content-between py-2 mb-4"
+        >
+          <p style="font-size: 24px; font-weight: bold; color: var(--primary-background-color)">Total</p>
+          <p style="font-size: 24px; font-weight: bold; color: var(--primary-background-color)">$115.00</p>
         </div>
       </div>
     </div>
 
       <!-- Checkout Form -->
-      <div class="checkout-form container-fluid col-12 col-md-6 px-4">
+      <div class="col-12 col=lg=6 col-md-6 px-4 py-5">
         <h3 style="color: var(--primary-background-color)">Checkout</h3>
-        <div style="margin-top: 20px;"></div>
-        <hr style="border-color: var(--primary-background-color); margin-top: 10px; margin-bottom: 15px;"/>
+        <hr class="mb-0" style="border-color: var(--primary-background-color); margin-top: 30px;"/>
+      <div class="py-5">
         <h5 style="color: var(--primary-background-color)">Delivery</h5>
         <form>
 
-          <div class="mb-3">
-              <select class="form-control" style="padding-top: 14px" required>
+              <select class="form-control" style="padding-top: 12px" required>
                 <option selected disabled>Country/region</option>
                 <option value="1">Singapore</option>
                 <option value="2">Malaysia</option>
                 <option value="3">Indonesia</option>
               </select>
-          </div>
-          <div class="row">
-            <div class="col-12 col-md-6">
-              <input type="text" class="form-control" placeholder="First name (optional)" />
+            <div class="row">
+              <div class="col-12 col-md-6">
+                <input type="text" class="form-control" placeholder="First name (optional)" />
+              </div>
+              <div class="col-12 col-md-6">
+                <input type="text" class="form-control" placeholder="Last name" />
+              </div>
             </div>
-            <div class="col-12 col-md-6">
-              <input type="text" class="form-control" placeholder="Last name" />
-            </div>
-          </div>
-          <div class="mb-3">
             <input type="text" class="form-control" placeholder="Address" required />
-          </div>
-          <div class="mb-5 row">
+          <div class="row">
             <div class="col-12 col-md-4">
               <input type="text" class="form-control" placeholder="City" required />
             </div>
@@ -136,21 +201,20 @@
               <input type="text" class="form-control" placeholder="Postal code" required />
             </div>
           </div>
+        </div>
 
           <h5 style="color: var(--primary-background-color)">Contact</h5>
-          <div class="mb-3">
             <input type="email" class="form-control" placeholder="Email or phone number" required />
-          </div>
 
-          <div class="form-check mb-5">
+          <div class="form-check">
             <input type="checkbox" class="form-check-input" id="news-offers">
             <label class="form-check-label" for="news-offers">Email me with news and offers</label>
           </div>
 
+          <div class="py-5">
           <h5 style="color: var(--primary-background-color)">Payment</h5>
-          <div class="mb-3">
             <input type="text" class="form-control" placeholder="Card number" required />
-          </div>
+
           <div class="row">
             <div class="col-12 col-md-6">
               <input type="text" class="form-control" placeholder="Expiration date (MM/YY)" required />
@@ -159,17 +223,66 @@
               <input type="text" class="form-control" placeholder="Security code" required />
             </div>
           </div>
-          <div class="mb-3">
+
             <input type="text" class="form-control" placeholder="Name on card" required />
-          </div>
-          <div class="form-check mb-5">
+
+          <div class="form-check">
             <input type="checkbox" class="form-check-input" id="billing-address">
             <label class="form-check-label" for="billing-address">Use shipping address as billing address</label>
           </div>
-
+          </div>
           <button type="button" class="btn btn-warning w-100">Pay Now</button>
         </form>
       </div>
+    </div>
+</div>
+           <!-- Footer -->
+     <footer class="d-flex w-100 flex-column align-items-end">
+      
+      <!-- Logo -->
+      <div class="d-flex align-items-center flex-grow-1 align-self-center py-4" style="padding: 0px 90px;">
+        <a href="index.html">
+          <img class="float-end mb-3" style="margin-right: -10%; width: 15%; height: auto" src="../assets/footer-assets/hearts.svg">
+          <img class="w-100" src="../assets/footer-assets/PYXELS.svg">
+        </a>
+      </div>
+      
+      <!-- Links -->
+      <div class="d-flex flex-row w-100 px-4 align-items-end flex-wrap">
+        <div class="d-flex flex-column py-4 px-3 gap-1 col-12 col-sm-6 col-lg-4 col-xl-2">
+          <div class="d-flex flex-row gap-1">
+            <a href=""><img class="socials" src="../assets/footer-assets/YouTube.svg"></a>
+            <a href=""><img class="socials" src="../assets/footer-assets/Instagram.svg"></a>
+          </div>
+          <div class="d-flex flex-row gap-1">
+            <a href=""><img class="socials" src="../assets/footer-assets/Facebook.svg"></a>
+            <a href=""><img class="socials" src="../assets/footer-assets/Twitter.svg"></a>
+          </div>
+        </div>
+        <div class="d-flex flex-column gap-1 py-4 px-4 col-12 col-sm-6 col-lg-4 col-xl-2">
+          <p>+65 6337 8290</p>
+          <a href="mailto: support@pyxels.com"><p>support@pyxels.com</p></a>
+          <p>24 New Industrial Rd, <br>#06-08 InSpace, <br>Singapore 536210</p>
+        </div>
+        <div class="d-flex flex-column gap-1 py-4 px-4 col-12 col-sm-6 col-lg-4 col-xl-2">
+          <p>Pyxel Collection</p>
+          <a href="lumio.html" style="font-family: 'MonsterFriendFore';"><p>Lumio 64</p></a>
+          <a href="voltio.html" style="font-family: 'MonsterFriendFore';"><p>Voltio Classic</p></a>
+        </div>
+        <div class="d-flex flex-column gap-1 py-4 px-4 col-12 col-sm-6 col-lg-4 col-xl-2">
+          <a href="about_us.html"><p>Behind the Pyxels</p></a>
+          <a href="featured-games.html"><p>Game Arcade</p></a>
+        </div>
+        <div class="d-flex flex-column gap-1 py-4 px-4 col-12 col-sm-6 col-lg-4 col-xl-2">
+          <a href="news.html"><p>Updates</p></a>
+          <a href="customer-support.html"><p>Support</p></a>
+          <a href="privacy_policy.html"><p>Privacy Policy</p></a>
+        </div>
+        <div class="d-flex flex-column gap-1 py-4 px-4 col-12 col-sm-6 col-lg-4 col-xl-2">
+          <p>&copy; Pyxels.<br>All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
 
 
     <script
