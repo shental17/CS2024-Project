@@ -32,6 +32,10 @@
   </head>
   <body class="primary-background d-flex flex-column align-items-center overflow-hidden position-relative" style="overflow-x: hidden;">
 
+    <audio id="custom-audio" autoplay loop>
+      <source src="../assets/index-assets/bgm.mp3" type="audio/mpeg">
+    </audio>
+
     <!-- Navbar -->
     <nav id="navbar" class="navbar navbar-dark bg-transparent fixed-top navbar-expand-lg px-4 py-4" >
       <div class="container-fluid p-0 m-0">
@@ -144,7 +148,7 @@
       <!-- Youtube video -->
       <div class="video">
         <iframe 
-          src="https://www.youtube.com/embed/BVMA_5ZUD-I?autoplay=1&loop=1&playlist=BVMA_5ZUD-I&controls=0&modestbranding=1&rel=0&showinfo=0&autohide=1&fs=0&cc_load_policy=0&iv_load_policy=3" 
+          src="https://www.youtube.com/embed/BVMA_5ZUD-I?autoplay=1&mute=1&loop=1&playlist=BVMA_5ZUD-I&controls=0&modestbranding=1&rel=0&showinfo=0&autohide=1&fs=0&cc_load_policy=0&iv_load_policy=3" 
           title="YouTube video player" 
           frameborder="0" 
           style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
@@ -548,7 +552,117 @@
       
     </div>
 
-    <!-- News -->
+    <!-- Updates -->
+    <div class="secondary-background w-100 d-flex flex-column gap-5 justify-content-center align-items-center position-relative" style="border-radius: 64px; padding: 100px 0px;">
+      <div class="d-flex flex-column text-center px-4 align-self-center" style="max-width: 1096px;">
+        <h1 style="color: var(--primary-background-color)"><span style="color: var(--pink-200)">+</span> Updates</h1>
+        <p style="font-size: 20px; line-height: 150%;">Stay informed with the latest news, product releases, and upcoming events. 
+          We’ll keep you updated on new offerings and what’s next for Pyxels, so you can plan ahead and never miss an important update.</p>
+      </div>
+
+      <!-- News cards-->
+      <div class="d-flex flex-row justify-content-center flex-wrap" style="max-width: 1368px;">
+
+        <div class="d-flex col-12 col-xl-4 px-3 py-4">
+          <div class="d-flex flex-column gap-4 news-card">
+            <div class="news-img" style="height: 200px;"><img src="../assets/index-assets/news/news-1.png" alt="news-1"></div>
+
+            <div class="d-flex flex-column px-4">
+              <div class="d-flex flex-row pb-3" style="gap: 12px;">
+                <div class="update-tags">Upcoming Games</div>
+                <div class="update-tags">Game Releases</div>
+              </div>
+              <h4 style="color:var(--primary-background-color)">Exciting Game Additions</h4>
+              <p>November 16 2024 </p>
+            </div>
+
+            <p class="px-4 pb-3">We're thrilled to announce the expansion of our game library, featuring the beloved Pokémon Sun and Moon, Pac-Man Championship Edition and other fan-favorite retro titles. 
+              Immerse yourself in nostalgic adventures as we continue to enhance the retro gaming experience with more iconic games.</p>
+          </div>
+        </div>
+
+        <div class="d-flex col-12 col-xl-4 px-3 py-4">
+          <div class="d-flex flex-column gap-4 news-card">
+            <div class="news-img" style="height: 200px;"><img src="../assets/index-assets/news/news-2.png" alt="news-2"></div>
+
+            <div class="d-flex flex-column px-4">
+              <div class="d-flex flex-row pb-3" style="gap: 12px;">
+                <div class="update-tags">Performance Improvements</div>
+                <div class="update-tags">Bug Fixes</div>
+              </div>
+              <h4 style="color:var(--primary-background-color)">Software Update 3.1</h4>
+              <p>November 10 2024 </p>
+            </div>
+
+            <p class="px-4 pb-3 flex-grow-1">Our latest software update is designed to bring you a smoother, more engaging gaming experience. 
+              This update introduces customizable game settings, improved save state management, and an optimized interface for better navigation.</p>
+          </div>
+        </div>
+
+        <div class="d-flex col-12 col-xl-4 px-3 py-4">
+          <div class="d-flex flex-column gap-4 news-card">
+            <div class="news-img" style="height: 200px;"><img src="../assets/index-assets/news/news-3.png" alt="news-3"></div>
+
+            <div class="d-flex flex-column px-4">
+              <div class="d-flex flex-row pb-3" style="gap: 12px;">
+                <div class="update-tags">Device Update</div>
+                <div class="update-tags">Hardware Enhancements</div>
+              </div>
+              <h4 style="color:var(--primary-background-color)">Firmware Update 2.0</h4>
+              <p>November 7 2024 </p>
+            </div>
+
+            <p class="px-4 pb-3">The latest firmware update enhances the overall performance of your retro pocket, ensuring faster load times and greater stability for all supported games. 
+              Stay ahead with better compatibility and an enriched gaming experience.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <a href="news.html"><button type="button" class="btn btn-primary">Discover the Latest Updates</button></a>
+      
+    </div>
+
+    <!-- Guarantees -->
+    <div class="d-flex justify-content-center align-items-center w-100" style="padding: 100px 0px;">
+      <div class="d-flex flex-row flex-wrap" style="max-width: 1368px;">
+
+        <div class="d-flex col-12 col-sm-6 col-lg-3 px-3 py-3">
+          <div class="d-flex flex-column p-4" style="border: 1px solid var(--gray-600)">
+            <div class="guarantee-icon p-3 mb-4"><i class='bx bx-shield-alt-2 icon'></i></div>
+            <h4 style="color: var(--secondary-background-color)">One Year Warranty</h4>
+            <p style="font-size: 20px; line-height: 150%;">Enjoy a peace of mind with a one-year warranty on all purchases.</p>
+          </div>
+        </div>
+
+        <div class="d-flex col-12 col-sm-6 col-lg-3 px-3 py-3">
+          <div class="d-flex flex-column p-4" style="border: 1px solid var(--gray-600)">
+            <div class="guarantee-icon p-3 mb-4"><i class='bx bx-headphone icon'></i></div>
+            <h4 style="color: var(--secondary-background-color)">Customer Service</h4>
+            <p style="font-size: 20px; line-height: 150%;">Our dedicated support team is here to assist you every step of the way.</p>
+          </div>
+        </div>
+
+        <div class="d-flex col-12 col-sm-6 col-lg-3 px-3 py-3">
+          <div class="d-flex flex-column p-4" style="border: 1px solid var(--gray-600)">
+            <div class="guarantee-icon p-3 mb-4"><i class='bx bx-lock-alt icon'></i></div>
+            <h4 style="color: var(--secondary-background-color)">Secure Payment</h4>
+            <p style="font-size: 20px; line-height: 150%;">Shop with confidence using our encrypted, secure payment system.</p>
+          </div>
+        </div>
+
+        <div class="d-flex col-12 col-sm-6 col-lg-3 px-3 py-3">
+          <div class="d-flex flex-column p-4" style="border: 1px solid var(--gray-600)">
+            <div class="guarantee-icon p-3 mb-4"><i class='bx bx-check-double icon'></i></div>
+            <h4 style="color: var(--secondary-background-color)">Quality Assurance</h4>
+            <p style="font-size: 20px; line-height: 150%;">We ensure top-notch performance and durability of our products.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
     <!-- Contact us / enquiry form -->
 
     <!-- Footer -->
@@ -566,12 +680,20 @@
       <div class="d-flex flex-row w-100 px-4 align-items-end flex-wrap">
         <div class="d-flex flex-column py-4 px-3 gap-1 col-12 col-sm-6 col-lg-4 col-xl-2">
           <div class="d-flex flex-row gap-1">
-            <a href="https://www.youtube.com/@ANBERNIC"><img class="socials" src="../assets/footer-assets/YouTube.svg" alt="youtube"></a>
-            <a href="https://www.instagram.com/anbernic_official_store/?hl=en"><img class="socials" src="../assets/footer-assets/Instagram.svg" alt="instagram"></a>
+            <a href="https://www.youtube.com/@ANBERNIC" target="_blank" >
+              <img class="socials" src="../assets/footer-assets/YouTube.svg" alt="youtube">
+            </a>
+            <a href="https://www.instagram.com/anbernic_official_store/?hl=en" target="_blank" >
+              <img class="socials" src="../assets/footer-assets/Instagram.svg" alt="instagram">
+            </a>
           </div>
           <div class="d-flex flex-row gap-1">
-            <a href="https://www.facebook.com/anbernicofficial/"><img class="socials" src="../assets/footer-assets/Facebook.svg" alt="facebook"></a>
-            <a href="https://x.com/anbernic_china"><img class="socials" src="../assets/footer-assets/Twitter.svg" alt="twitter"></a>
+            <a href="https://www.facebook.com/anbernicofficial/" target="_blank" >
+              <img class="socials" src="../assets/footer-assets/Facebook.svg" alt="facebook">
+            </a>
+            <a href="https://x.com/anbernic_china" target="_blank" >
+              <img class="socials" src="../assets/footer-assets/Twitter.svg" alt="twitter">
+            </a>
           </div>
         </div>
         <div class="d-flex flex-column gap-1 py-4 px-4 col-12 col-sm-6 col-lg-4 col-xl-2">
