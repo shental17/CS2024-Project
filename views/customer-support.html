@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Pyxels - Support</title>
+    <meta
+      name="description"
+      content="Find comprehensive support with our FAQs and direct contact options. Get answers to common questions, detailed guides, and personalized help to ensure the best user experience."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,29 +24,144 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link rel="icon" href="../assets/pyxel-favicon.svg" type="image/svg" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/customer-support.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/lenis@1.1.13/dist/lenis.css"
+    />
+    <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+    <script src="../js/lenis_scroll.js"></script>
   </head>
   <body class="primary-background">
-    <main id="customer-support">
+    <nav
+      id="navbar"
+      class="navbar navbar-dark bg-transparent fixed-top navbar-expand-lg px-4 py-4"
+    >
+      <div class="container-fluid p-0 m-0">
+        <a class="navbar-brand p-0" href="index.html">
+          <img src="../assets/pyxels-logo.svg" alt="Pyxels" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasDarkNavbar"
+          aria-controls="offcanvasDarkNavbar"
+          aria-label="Toggle navigation"
+        >
+          <i
+            class="bx bx-menu-alt-right icon fs-2"
+            style="color: var(--secondary-background-color)"
+          ></i>
+        </button>
+
+        <div
+          class="offcanvas offcanvas-end text-bg-dark"
+          tabindex="-1"
+          id="offcanvasDarkNavbar"
+          aria-labelledby="offcanvasDarkNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <img
+              class="offcanvas-title"
+              src="../assets/pyxels-logo.svg"
+              alt="Pyxels"
+            />
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="offcanvas-body">
+            <ul
+              class="navbar-nav justify-content-end flex-grow-1 gap-4"
+              style="padding-right: 100px"
+            >
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Pyxel Collection
+                  <i class="bx bx-chevron-down icon"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li>
+                    <a class="dropdown-item" href="lumio.html">Lumio 64</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="voltio.html"
+                      >Voltio Classic</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="about_us.html">Behind the Pyxels</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="featured-games.html">Game Arcade</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="news.html">Updates</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="customer-support.html">Support</a>
+              </li>
+
+              <a class="position-absolute cart-link" href="cart.html">
+                <div
+                  class="d-flex justify-content-center align-items-center cart-btn"
+                >
+                  <i class="bx bx-cart icon"></i>
+                </div>
+              </a>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main id="customer-support" style="padding-top: 76px">
       <section>
         <div class="container px-4">
           <img
             src="../assets/customer-support.png"
             class="d-block w-100"
-            alt="Firmware"
+            alt="Customer Support Image"
           />
         </div>
       </section>
       <section id="faq">
-        <div class="container px-4">
-          <div class="d-lg-flex flex-row gap-3 justify-content-center mb-5">
+        <div class="container" style="max-width: 1320px">
+          <div
+            class="d-lg-flex flex-row gap-3 justify-content-center mb-5 px-4"
+          >
             <h1 class="logo">&</h1>
-            <h1 class="text-center">frequently asked questions</h1>
+            <h1
+              class="text-center"
+              style="word-wrap: break-word; word-break: break-word"
+            >
+              frequently asked questions
+            </h1>
           </div>
-          <div class="row mb-5">
+          <div class="row mb-5 px-4">
             <div class="col-12 col-md-4 mb-2">
-              <h3>Product FAQs</h3>
+              <h3 style="word-wrap: break-word; word-break: break-word">
+                Product FAQs
+              </h3>
               <p>
                 Find answers to all your questions about our products, from
                 specifications and features to compatibility and supported
@@ -127,7 +246,8 @@
                       The Retro Lumios comes with a selection of pre-installed
                       retro games from various classic systems. You can play
                       games supported by emulators such as NES, SNES, Game Boy,
-                      Sega Genesis, and more.
+                      Sega Genesis, and more. Find out more
+                      <a href="featured-games.html">here</a>.
                     </div>
                   </div>
                 </div>
@@ -212,9 +332,11 @@
               </div>
             </div>
           </div>
-          <div class="row mb-5">
+          <div class="row mb-5 px-4">
             <div class="col-12 col-md-4 mb-2">
-              <h3>Troubleshooting FAQs</h3>
+              <h3 style="word-wrap: break-word; word-break: break-word">
+                Troubleshooting FAQs
+              </h3>
               <p>
                 Experiencing an issue? Our Troubleshooting FAQs are here to
                 help. Browse solutions for common problems, including software
@@ -407,9 +529,11 @@
               </div>
             </div>
           </div>
-          <div class="row mb-5">
+          <div class="row mb-5 px-4">
             <div class="col-12 col-md-4 mb-2">
-              <h3>Refund, Return & Exchange FAQs</h3>
+              <h3 style="word-wrap: break-word; word-break: break-word">
+                Refund, Return & Exchange FAQs
+              </h3>
               <p>
                 Learn about our policies on refunds, returns, and exchanges.
                 This section answers questions on how to initiate a return,
@@ -491,10 +615,15 @@
                     data-bs-parent="#accordionFlushExampleThree"
                   >
                     <div class="accordion-body">
-                      Visit the returns section on our website to start the
-                      return process. Ensure the product is in its original
-                      condition and packaging, and follow the provided
-                      instructions.
+                      Visit the
+                      <a
+                        href="return_policy.html"
+                        style="color: var(--primary-color)"
+                        >return policy</a
+                      >
+                      section on our website to start the return process. Ensure
+                      the product is in its original condition and packaging,
+                      and follow the provided instructions.
                     </div>
                   </div>
                 </div>
@@ -518,8 +647,13 @@
                   >
                     <div class="accordion-body">
                       Yes, we offer exchanges and returns within 30 days of
-                      purchase. Check our return policy for details and any
-                      exceptions.
+                      purchase. Check our
+                      <a
+                        href="return_policy.html"
+                        style="color: var(--primary-color)"
+                        >return policy</a
+                      >
+                      for details and any exceptions.
                     </div>
                   </div>
                 </div>
@@ -529,21 +663,23 @@
         </div>
       </section>
       <section id="contact">
-        <div class="container px-4">
-          <div class="d-md-flex flex-row gap-3 justify-content-center mb-5">
+        <div class="container">
+          <div
+            class="d-md-flex flex-row gap-3 justify-content-center mb-5 px-4"
+          >
             <h1 class="logo">&</h1>
             <h1 class="text-center">contact our team</h1>
           </div>
           <div class="row mb-5">
             <div class="col-12 col-md-4 mb-2">
-              <div class="row mb-3">
+              <div class="row mb-3 px-4">
                 <h3>Chat with us</h3>
                 <p>
                   Chat with a specialist from Pyxel support team for quick
                   answers at <span>+65 6337 8290</span>
                 </p>
               </div>
-              <div class="row mb-3">
+              <div class="row mb-3 px-4">
                 <h3>Call us</h3>
                 <p>
                   Prefer to speak to someone directly? Our Pyxel customer
@@ -551,17 +687,17 @@
                   hours from 9am - 5pm at <span>+65 6337 8290</span>
                 </p>
               </div>
-              <div class="row mb-3">
+              <div class="row mb-3 px-4">
                 <h3>Email us</h3>
                 <p>
                   For detailed enquiries or when you need support outside of
                   business hours, you can email your questions or issues at
-                  <a href="support@pyxel.com">support@pyxel.com</a>. Our Pyxel
-                  customer support team will get back to you in 1-2 business
-                  days.
+                  <a href="mailto:support@pyxel.com">support@pyxel.com</a>. Our
+                  Pyxel customer support team will get back to you in 1-2
+                  business days.
                 </p>
               </div>
-              <div class="row mb-3">
+              <div class="row mb-3 px-4">
                 <h3>Visit us</h3>
                 <p>
                   If you prefer in-person assistance, we welcome you to visit us
@@ -610,9 +746,11 @@
                   required
                 >
                   <option selected>How can we help you?</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
+                  <option value="1">Product Information</option>
+                  <option value="2">Ordering and Payment</option>
+                  <option value="3">Shipping and Delivery</option>
+                  <option value="4">Returns and Exchanges</option>
+                  <option value="5">Privacy</option>
                 </select>
               </div>
               <div class="mb-5">
@@ -655,6 +793,85 @@
         </div>
       </section>
     </main>
+    <!-- Footer -->
+    <footer class="d-flex w-100 flex-column align-items-end">
+      <!-- Logo -->
+      <div
+        class="d-flex align-items-center flex-grow-1 align-self-center py-4"
+        style="padding: 0px 90px"
+      >
+        <a href="index.html">
+          <img
+            class="float-end mb-3"
+            style="margin-right: -10%; width: 15%; height: auto"
+            src="../assets/footer-assets/hearts.svg"
+          />
+          <img class="w-100" src="../assets/footer-assets/PYXELS.svg" />
+        </a>
+      </div>
+
+      <!-- Links -->
+      <div class="d-flex flex-row w-100 px-4 align-items-end flex-wrap">
+        <div
+          class="d-flex flex-column py-4 px-3 gap-1 col-12 col-sm-6 col-lg-4 col-xl-2"
+        >
+          <div class="d-flex flex-row gap-1">
+            <a href=""
+              ><img class="socials" src="../assets/footer-assets/YouTube.svg"
+            /></a>
+            <a href=""
+              ><img class="socials" src="../assets/footer-assets/Instagram.svg"
+            /></a>
+          </div>
+          <div class="d-flex flex-row gap-1">
+            <a href=""
+              ><img class="socials" src="../assets/footer-assets/Facebook.svg"
+            /></a>
+            <a href=""
+              ><img class="socials" src="../assets/footer-assets/Twitter.svg"
+            /></a>
+          </div>
+        </div>
+        <div
+          class="d-flex flex-column gap-1 py-4 px-4 col-12 col-sm-6 col-lg-4 col-xl-2"
+        >
+          <p>+65 6337 8290</p>
+          <a href="mailto: support@pyxels.com"><p>support@pyxels.com</p></a>
+          <p>
+            24 New Industrial Rd, <br />#06-08 InSpace, <br />Singapore 536210
+          </p>
+        </div>
+        <div
+          class="d-flex flex-column gap-1 py-4 px-4 col-12 col-sm-6 col-lg-4 col-xl-2"
+        >
+          <p>Pyxel Collection</p>
+          <a href="lumio.html" style="font-family: 'MonsterFriendFore'"
+            ><p>Lumio 64</p></a
+          >
+          <a href="voltio.html" style="font-family: 'MonsterFriendFore'"
+            ><p>Voltio Classic</p></a
+          >
+        </div>
+        <div
+          class="d-flex flex-column gap-1 py-4 px-4 col-12 col-sm-6 col-lg-4 col-xl-2"
+        >
+          <a href="about_us.html"><p>Behind the Pyxels</p></a>
+          <a href="featured-games.html"><p>Game Arcade</p></a>
+        </div>
+        <div
+          class="d-flex flex-column gap-1 py-4 px-4 col-12 col-sm-6 col-lg-4 col-xl-2"
+        >
+          <a href="news.html"><p>Updates</p></a>
+          <a href="customer-support.html"><p>Support</p></a>
+          <a href="privacy_policy.html"><p>Privacy Policy</p></a>
+        </div>
+        <div
+          class="d-flex flex-column gap-1 py-4 px-4 col-12 col-sm-6 col-lg-4 col-xl-2"
+        >
+          <p>&copy; Pyxels.<br />All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

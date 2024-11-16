@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta
+      name="description"
+      content="Review your selected items, adjust quantities, and proceed to checkout with ease. Enjoy a streamlined shopping experience designed for convenience and efficiency."
+    />
+    <title>Pyxels - Shopping Cart</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,18 +24,129 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link rel="icon" href="../assets/pyxel-favicon.svg" type="image/svg" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/cart.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/lenis@1.1.13/dist/lenis.css"
+    />
+    <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+    <script src="../js/lenis_scroll.js"></script>
+    <script src="../js/cart.js"></script>
   </head>
   <body class="primary-background">
-    <main id="cart">
-      <div class="container">
-        <h1>Shopping Cart</h1>
+    <nav
+      id="navbar"
+      class="navbar navbar-dark bg-transparent fixed-top navbar-expand-lg px-4 py-4"
+    >
+      <div class="container-fluid p-0 m-0">
+        <a class="navbar-brand p-0" href="index.html">
+          <img src="../assets/pyxels-logo.svg" alt="Pyxels" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasDarkNavbar"
+          aria-controls="offcanvasDarkNavbar"
+          aria-label="Toggle navigation"
+        >
+          <i
+            class="bx bx-menu-alt-right icon fs-2"
+            style="color: var(--secondary-background-color)"
+          ></i>
+        </button>
+
+        <div
+          class="offcanvas offcanvas-end text-bg-dark"
+          tabindex="-1"
+          id="offcanvasDarkNavbar"
+          aria-labelledby="offcanvasDarkNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <img
+              class="offcanvas-title"
+              src="../assets/pyxels-logo.svg"
+              alt="Pyxels"
+            />
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="offcanvas-body">
+            <ul
+              class="navbar-nav justify-content-end flex-grow-1 gap-4"
+              style="padding-right: 100px"
+            >
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Pyxel Collection
+                  <i class="bx bx-chevron-down icon"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li>
+                    <a class="dropdown-item" href="lumio.html">Lumio 64</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="voltio.html"
+                      >Voltio Classic</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="about_us.html">Behind the Pyxels</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="featured-games.html">Game Arcade</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="news.html">Updates</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="customer-support.html">Support</a>
+              </li>
+
+              <a class="position-absolute cart-link" href="cart.html">
+                <div
+                  class="d-flex justify-content-center align-items-center cart-btn"
+                >
+                  <i class="bx bx-cart icon"></i>
+                </div>
+              </a>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main id="cart" style="padding-top: 76px">
+      <div class="container" style="padding-top: 100px; padding-bottom: 100px">
+        <h1 style="word-wrap: break-word; word-break: break-word">
+          Shopping Cart
+        </h1>
       </div>
       <section>
-        <div class="container-fluid content">
-          <div class="row">
-            <div class="col-12 col-lg-9 p-4">
+        <div
+          class="container-fluid content d-flex flex-column justify-content-center align-items-center"
+        >
+          <div class="row" style="width: 100%; max-width: 1359px">
+            <div class="col-12 col-lg-9 px-4">
               <table class="table borderless-table table-responsive-md">
                 <thead>
                   <tr class="d-none d-md-table-row">
@@ -40,11 +155,8 @@
                     <th colspan="2">Quantity</th>
                     <th colspan="1">Total Price</th>
                   </tr>
-                  <tr class="d-md-none">
-                    <th colspan="12">Product</th>
-                  </tr>
                 </thead>
-                <tbody>
+                <tbody id="cart-body">
                   <tr class="d-none d-md-table-row">
                     <!-- Product Image -->
                     <td colspan="4">
@@ -64,33 +176,43 @@
                         <p>Vintage White</p>
                       </div>
                     </td>
-                    <!-- Product Price -->
                     <td colspan="1">
-                      <h6>$50.00</h6>
+                      <h6 class="item-price">$50.00</h6>
                     </td>
-                    <!-- Quantity Container -->
                     <td colspan="2">
                       <div
-                        class="quantity-container d-inline-flex align-items-center p-3"
+                        class="d-flex flex-row gap-2 justify-content-between align-items-center p-3"
+                        style="
+                          max-width: fit-content;
+                          border: 1px solid var(--gray-400);
+                          border-radius: 64px;
+                          max-height: fit-content;
+                        "
                       >
-                        <button class="btn btn-outline-secondary">-</button>
-                        <input
-                          type="text"
-                          value="2"
-                          class="form-control text-center mx-2"
-                        />
-                        <button class="btn btn-outline-secondary">+</button>
+                        <i
+                          style="font-size: 28px"
+                          class="bx bx-minus-circle icon qty-btn"
+                          onclick="decreaseValue()"
+                        ></i>
+                        <p class="m-0 qty">1</p>
+                        <i
+                          style="font-size: 28px"
+                          class="bx bx-plus-circle icon qty-btn"
+                          onclick="increaseValue()"
+                        ></i>
                       </div>
                     </td>
                     <!-- Total Price -->
                     <td colspan="1">
-                      <h6>$100.00</h6>
+                      <h6 class="total-price">$100.00</h6>
                     </td>
                     <!-- Delete Action -->
                     <td colspan="1">
-                      <button class="btn btn-outline-secondary delete">
+                      <button
+                        class="btn btn-outline-secondary delete"
+                        onclick="deleteItem()"
+                      >
                         <i class="bi bi-trash"></i>
-                        <!-- Using Bootstrap Icons -->
                       </button>
                     </td>
                   </tr>
@@ -110,26 +232,38 @@
                     <td colspan="10">
                       <h6>Pyxel's Lumio 64</h6>
                       <p>Vintage White</p>
-                      <h6>$50.00</h6>
+                      <h6 class="item-price">$50.00</h6>
                       <div class="mb-4">
                         <div
-                          class="quantity-container d-inline-flex align-items-center p-3"
+                          class="d-flex flex-row gap-2 justify-content-between align-items-center p-3"
+                          style="
+                            max-width: fit-content;
+                            border: 1px solid var(--gray-400);
+                            border-radius: 64px;
+                            max-height: fit-content;
+                          "
                         >
-                          <button class="btn btn-outline-secondary">-</button>
-                          <input
-                            type="text"
-                            value="2"
-                            class="form-control text-center mx-2"
-                          />
-                          <button class="btn btn-outline-secondary">+</button>
+                          <i
+                            style="font-size: 28px"
+                            class="bx bx-minus-circle icon qty-btn"
+                            onclick="decreaseValue()"
+                          ></i>
+                          <p class="m-0 qty">1</p>
+                          <i
+                            style="font-size: 28px"
+                            class="bx bx-plus-circle icon qty-btn"
+                            onclick="increaseValue()"
+                          ></i>
                         </div>
                       </div>
-                      <h6>Total: $100.00</h6>
+                      <h6>Total: <span class="total-price">$100.00</span></h6>
                     </td>
-                    <td colspan="2">
-                      <button class="btn btn-outline-secondary delete">
+                    <td colspan="2" class="d-flex justify-content-end">
+                      <button
+                        class="btn btn-outline-secondary delete"
+                        onclick="deleteItem()"
+                      >
                         <i class="bi bi-trash"></i>
-                        <!-- Using Bootstrap Icons -->
                       </button>
                     </td>
                   </tr>
@@ -141,34 +275,122 @@
               <div class="py-4">
                 <div class="d-flex flex-row justify-content-between">
                   <p>Subtotal</p>
-                  <p>$100.00</p>
+                  <p class="total-price">$100.00</p>
                 </div>
                 <div class="d-flex flex-row justify-content-between">
                   <p>Shipping</p>
-                  <p>$5.90</p>
+                  <p class="shipping">$5.90</p>
                 </div>
                 <div class="d-flex flex-row justify-content-between">
                   <p>Estimated GST</p>
-                  <p>$9.00</p>
+                  <p class="gst">$9.00</p>
                 </div>
               </div>
               <div
                 class="total d-flex flex-row justify-content-between py-2 mb-4"
               >
                 <h3>Total</h3>
-                <h3>$115.00</h3>
+                <h3 class="grand-total">$115.00</h3>
               </div>
               <div class="d-grid gap-2">
-                <button class="btn btn-warning">Checkout</button>
-                <button class="btn btn-outline-warning">
-                  Continue Shopping
-                </button>
+                <a href="checkout.html" style="width: 100%">
+                  <button class="btn btn-warning" style="width: 100%">
+                    Checkout
+                  </button>
+                </a>
+                <a href="index.html" style="width: 100%">
+                  <button class="btn btn-outline-warning" style="width: 100%">
+                    Continue Shopping
+                  </button>
+                </a>
               </div>
             </div>
           </div>
         </div>
       </section>
     </main>
+    <!-- Footer -->
+    <footer class="d-flex w-100 flex-column align-items-end">
+      <!-- Logo -->
+      <div
+        class="d-flex align-items-center flex-grow-1 align-self-center py-4"
+        style="padding: 0px 90px"
+      >
+        <a href="index.html">
+          <img
+            class="float-end mb-3"
+            style="margin-right: -10%; width: 15%; height: auto"
+            src="../assets/footer-assets/hearts.svg"
+          />
+          <img class="w-100" src="../assets/footer-assets/PYXELS.svg" />
+        </a>
+      </div>
+
+      <!-- Links -->
+      <div class="d-flex flex-row w-100 px-4 align-items-end flex-wrap">
+        <div
+          class="d-flex flex-column py-4 px-3 gap-1 col-12 col-sm-6 col-lg-4 col-xl-2"
+        >
+          <div class="d-flex flex-row gap-1">
+            <a href=""
+              ><img class="socials" src="../assets/footer-assets/YouTube.svg"
+            /></a>
+            <a href=""
+              ><img class="socials" src="../assets/footer-assets/Instagram.svg"
+            /></a>
+          </div>
+          <div class="d-flex flex-row gap-1">
+            <a href=""
+              ><img class="socials" src="../assets/footer-assets/Facebook.svg"
+            /></a>
+            <a href=""
+              ><img class="socials" src="../assets/footer-assets/Twitter.svg"
+            /></a>
+          </div>
+        </div>
+        <div
+          class="d-flex flex-column gap-1 py-4 px-4 col-12 col-sm-6 col-lg-4 col-xl-2"
+        >
+          <p>+65 6337 8290</p>
+          <a href="mailto: support@pyxels.com"><p>support@pyxels.com</p></a>
+          <p>
+            24 New Industrial Rd, <br />#06-08 InSpace, <br />Singapore 536210
+          </p>
+        </div>
+        <div
+          class="d-flex flex-column gap-1 py-4 px-4 col-12 col-sm-6 col-lg-4 col-xl-2"
+        >
+          <p>Pyxel Collection</p>
+          <a href="lumio.html" style="font-family: 'MonsterFriendFore'"
+            ><p>Lumio 64</p></a
+          >
+          <a href="voltio.html" style="font-family: 'MonsterFriendFore'"
+            ><p>Voltio Classic</p></a
+          >
+        </div>
+        <div
+          class="d-flex flex-column gap-1 py-4 px-4 col-12 col-sm-6 col-lg-4 col-xl-2"
+        >
+          <a href="about_us.html"><p>Behind the Pyxels</p></a>
+          <a href="featured-games.html"><p>Game Arcade</p></a>
+        </div>
+        <div
+          class="d-flex flex-column gap-1 py-4 px-4 col-12 col-sm-6 col-lg-4 col-xl-2"
+        >
+          <a href="news.html"><p>Updates</p></a>
+          <a href="customer-support.html"><p>Support</p></a>
+          <a href="privacy_policy.html"><p>Privacy Policy</p></a>
+        </div>
+        <div
+          class="d-flex flex-column gap-1 py-4 px-4 col-12 col-sm-6 col-lg-4 col-xl-2"
+        >
+          <p>&copy; Pyxels.<br />All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      updatePrices();
+    </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

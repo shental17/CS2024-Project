@@ -71,7 +71,8 @@
   background-size: 50px 50px;
   background-position: 0 0, 10px 10px;
   overflow: hidden;
-  padding: var(--spacing-6);
+  padding-top: 100px;
+  padding-bottom: 100px;
   border-radius: var(--spacing-6);
 }
 #news #coming-soon h1,
