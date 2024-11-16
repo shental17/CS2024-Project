@@ -26,6 +26,7 @@
   padding: 16px;
   width: 100%;
   box-sizing: border-box;
+  border-radius: 4px;
 }
 
 @media (min-width: 768px) {
@@ -47,9 +48,9 @@
   margin-top: 16px; 
 }
 
-.d-flex .form-check {
-  margin-top: 16px; 
-}
+  .d-flex .form-check {
+    margin-top: 16px; 
+  }
 
 .product-border{
   border: 1px solid var(--gray-400);

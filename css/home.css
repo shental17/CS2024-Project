@@ -203,6 +203,42 @@
   align-self: start;
 }
 
+#contact form {
+  border-radius: 32px;
+}
+#contact form label,
+#contact form h3 {
+  color: var(--base-black);
+}
+#contact form .form-select {
+  color: var(--gray-600);
+}
+
+#contact h3 {
+  color: var(--secondary-background-color)
+}
+
+.form-control {
+  height: 52px; 
+  font-size: 16px; 
+  padding: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.form-select {
+  padding: 16px;
+  border-radius: 4px;
+}
+
+#contact span,
+#contact a {
+  color: var(--primary-color);
+}
+
+
+
 @media (min-width:768px) {
   .video {
     padding-bottom: 36.25%;
